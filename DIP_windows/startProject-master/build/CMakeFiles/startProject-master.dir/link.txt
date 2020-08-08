@@ -1,0 +1,3 @@
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\startProject-master.dir/objects.a
+C:\PROGRA~1\CODEBL~1\MinGW\bin\ar.exe cr CMakeFiles\startProject-master.dir/objects.a @CMakeFiles\startProject-master.dir\objects1.rsp
+C:\PROGRA~1\CODEBL~1\MinGW\bin\G__~1.EXE -g -Wl,--whole-archive CMakeFiles\startProject-master.dir/objects.a -Wl,--no-whole-archive -o startProject-master.exe -Wl,--out-implib,libstartProject-master.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\startProject-master.dir\linklibs.rsp
