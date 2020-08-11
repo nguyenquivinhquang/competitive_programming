@@ -1,46 +1,32 @@
-/*
-1. Input a maximum 4-digit integer n. Write a program to read the number n.
- ________________________________________________
-| Input: 1234                                    |
-| Output: "one thousand two hundred thirty four" |
-|________________________________________________|
-*/
-
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
-int ex1(int testcase)
+#include <stdlib.h>
+#define MAXN 1000
+struct information
 {
-    char *ones[10] = {"", "one ", "two ", "three ", "four ", "five ", "six ", "seven ", "eight ", "nine "};
+    int ID, Post_code;
+    char *First_name, *Last_name, *email;
+    //char First_name[30], Last_name[30];
+    float rating;
+} employee[MAXN];
+int n;
+void input()
+{
+    scanf("%d", &n);
 
-    char *tens[10] = {"", "", "twenty ", "thirty ", "forty ", "fifty ", "sixty ", "seventy ", "eighty ", "ninety "};
-    int t[5], n = 0;
-    while (testcase > 0)
+    for (int i = 1; i <= n; i++)
     {
-        t[n++] = testcase % 10;
-        testcase = testcase / 10;
+        employee[i].First_name = malloc(sizeof(char) * 30);
+        printf("First Name: ");
+        fgets(employee[i].First_name, 30, stdin);
+        //employee[i].First_name = t;
+        printf("Last Name: ");
+        fgets(employee[i].Last_name, 30, stdin);
     }
-    for (int i = n-1; i >= 0; i--)
-    {
-        if (i != 1)
-        {
-            printf("%s", ones[t[i]]);
-            if (i == 3)
-                printf("thousand ");
-            if (i == 2)
-                printf("hundred ");
-        }
-        else
-        {
-            printf("%s", tens[t[i]]);
-        }
-    }
+    for (int i = 1; i <= n; i++)
+        printf("%s", employee[i].First_name);
 }
-
-int main(int argc, char *argv[])
+int main()
 {
-    int testcase = atoi(argv[1]);
-    ex1(testcase);
-
-    return 0;
+    input();
 }

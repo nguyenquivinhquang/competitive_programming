@@ -13,47 +13,35 @@ bool cmp(pp x, pp y)
         return x.first > y.first;
     return x.second > y.second;
 }
-ll get(ll val, pp a[], int size)
-{
-    ll l = 0, r = size + 1, mid;
-    while (r - l > 1)
-    {
-        mid = (l + r) / 2;
-
-        if (a[mid].first < val)
-            r = mid;
-        else
-            l = mid;
-    }
-    return l;
-}
 void solve()
 {
 
-    // /pp a[N];
     ll n, m, res = 0, cur = 0;
     cur = res = 0;
-    //reset(a);
 
     cin >> n >> m;
     pp a[m + 5];
-    ll prefix[m + 5];
+    ll prefix[m + 5], b[m + 5];
+    reset(a);
     reset(prefix);
     for (int i = 1; i <= m; i++)
     {
         cin >> a[i].first >> a[i].second;
     }
     sort(a + 1, a + 1 + m, cmp);
+
     for (int i = 1; i <= m; i++)
     {
         prefix[i] = prefix[i - 1] + a[i].first;
+        b[i] = a[i].first;
     }
     for (int i = 1; i <= m; i++)
     {
-        ll pos = get(a[i].second, a, m);
-        if (pos == 0)
+        ll pos = lower_bound(b + 1, b + 1 + m, a[i].second, greater<int>()) - b;
+        pos--;
+        if (pos > n )
         {
-            res = max(res, a[i].first + a[i].second * (n - 1));
+            res = max(res, prefix[n]);
             continue;
         }
 
