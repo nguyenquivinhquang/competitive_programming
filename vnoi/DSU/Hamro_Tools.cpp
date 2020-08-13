@@ -34,8 +34,7 @@ int join(int u, int v)
         parent[v] = u;
         return u;
     }
-    else
-        parent[u] = v;
+    parent[u] = v;
     return v;
 }
 void solve()
