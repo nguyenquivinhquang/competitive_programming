@@ -1,33 +1,61 @@
 #include <bits/stdc++.h>
 #define N 100
-#define ll long long
-#define pp pair<int, int>
-#define fastio ios_base::sync_with_stdio(false), cin.tie(NULL);
-#define reset(x) memset(x, 0, sizeof(x))
-#define quyen_sort(x, size) sort(x + 1, x + 1 + size);
 using namespace std;
-string dict[10] = {"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
-char res[100];
-void ex5(string k, int depth = 0)
+int n, a[N], b[N], m, c[N], k;
+void q1()
 {
-    if (depth > k.length())
+    cin >> n;
+    for (int i = 1; i <= n; i++)
+        cin >> a[i];
+    sort(a + 1, a + 1 + n / 2);
+    sort(a + n / 2 + 1, a + 1 + n, greater<>());
+}
+void q2()
+{
+    int i = 1;
+    cin >> m;
+    b[0] = -1e9;
+    while (i <= m)
     {
-        for (int i = 1; i < depth; i++)
-            cout << res[i];
-        cout << " ";
-        return;
-    }
-    string temp = dict[int(k[depth - 1]) - '0'];
-    for (int i = 0; i < temp.length(); i++)
-    {
-        res[depth] = temp[i];
-        ex5(k, depth + 1);
+        cin >> b[i];
+        if (b[i] >= b[i - 1])
+            i++;
+        else
+        {
+            cout << "input again";
+        }
     }
 }
-
-int main(int argc, char *argv[])
+void q3()
 {
-    string k = "29";
-    ex5(k, 1);
-    return 0;
+    k = 1;
+    int i = 1, j = 1;
+    while (i <= n / 2 && j <= m)
+        if (a[i] < b[j])
+            c[k++] = a[i++];
+        else
+            c[k++] = b[j++];
+            
+    while (i <= n / 2)
+        c[k++] = a[i++];
+    while (j <= m)
+        c[k++] = b[j++];
+    k--;
+}
+void q4()
+{
+    if (k % 2 == 0)
+        cout << (c[k / 2] + c[k / 2 + 1]) / 2;
+    else
+        cout << c[k / 2 + 1];
+}
+int main()
+{
+
+    q1();
+    q2();
+    q3();
+    q4();
+    for (int i = 1; i <= k; i++)
+        cout << c[i] << " ";
 }
