@@ -6,15 +6,19 @@
 #define reset(x) memset(x, 0, sizeof(x))
 #define quyen_sort(x, size) sort(x + 1, x + 1 + size);
 using namespace std;
-void solve()
-{
-}
 int main()
 {
-    int n;
-    cin >> n;
-    if (n % 2 == 0)
-        cout << "YES";
-    else
-        cout << "NO";
+    string x;
+    map<int, ll> trace;
+    ll res = 0;
+    cin >> x;
+    for (int i = 0; i < x.length(); i++)
+    {
+        int t = x[i] - '0';
+        if (t == 1)
+            trace[t]++;
+        if (t == 2)
+            res += trace[1];
+    }
+    cout << res;
 }

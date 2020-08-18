@@ -6,11 +6,17 @@
 #define reset(x) memset(x, 0, sizeof(x))
 #define quyen_sort(x, size) sort(x + 1, x + 1 + size);
 using namespace std;
+bool cmp(int x, int y)
+{
+    return x > y;
+}
 void solve()
 {
-    vector<ll> x, y, z;
-    ll r, g, b, temp;
-    x.push_back(0), y.push_back(0), z.push_back(0);
+    vector<int> x, y, z;
+    int r, g, b, temp, res = 0;
+    int dp[N][N][N];
+    reset(dp);
+    x.push_back(1e9), y.push_back(1e9), z.push_back(1e9);
     cin >> r >> g >> b;
     for (int i = 1; i <= r; i++)
     {
@@ -27,33 +33,26 @@ void solve()
         cin >> temp;
         z.push_back(temp);
     }
-    ll res = 0;
-    sort(x.begin(), x.end()), sort(y.begin(), y.end()), sort(z.begin(), z.end());
-    while (1 != 0)
-    {
-        if (x[r] * y[g] >= x[r] * z[b] && x[r] * y[g] >= y[g] * z[b] && r * g > 0)
-        {
-            res += x[r--] * y[g--];
-        }
-        else if (x[r] * z[b] >= x[r] * y[g] && x[r] * z[b] >= y[g] * z[b] && r * b > 0)
-        {
-            res += x[r--] * z[b--];
-        }
-        else
-        {
-            res += y[g--] * z[b--];
-        }
-        //cout << r << " " << g << " " << b << endl;
-        if ((r == 0 && b == 0) || (r == 0 && g == 0) || (g == 0 && b == 0))
-            break;
-    }
+
+    sort(x.begin(), x.end(), cmp), sort(y.begin(), y.end(), cmp), sort(z.begin(), z.end(), cmp);
+    x[0] = y[0] = z[0] = 0;
+    for (int i = 0; i <= r; i++)
+        for (int j = 0; j <= g; j++)
+            for (int k = 0; k <= b; k++)
+            {
+                if (i && j)
+                    dp[i][j][k] = max(dp[i][j][k], dp[i - 1][j - 1][k] + x[i] * y[j]);
+                if (i && k)
+                    dp[i][j][k] = max(dp[i][j][k], dp[i - 1][j][k - 1] + x[i] * z[k]);
+                if (j && k)
+                    dp[i][j][k] = max(dp[i][j][k], dp[i][j - 1][k - 1] + z[k] * y[j]);
+                res = max(res, dp[i][j][k]);
+            }
+
     cout << res << endl;
 }
 int main()
 {
-    // freopen("/mnt/CODE/competitive_programming/codeforces/problemset/out.txt", "r", stdin);
-    // freopen("out1.txt", "w", stdout);
+    solve();
     fastio;
-    //solve();
-    cout << (9&&0);
 }
