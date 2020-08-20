@@ -1,33 +1,60 @@
-#include <bits/stdc++.h>
-#define N 100
-#define ll long long
-#define pp pair<int, int>
-#define fastio ios_base::sync_with_stdio(false), cin.tie(NULL);
-#define reset(x) memset(x, 0, sizeof(x))
-#define q_sort(x, size) sort(x + 1, x + 1 + size);
-using namespace std;
-int ex2(int n, string str[])
+#include  < bits / stdc++.h>
+#define  N 100
+using namespace std;
+int n, a[N], b[N], m, c[N], k;
+void q1()
 {
-    string temp;
-    vector<string> a;
-    for (int i = 0; i < n; i++)
-        a.push_back(str[i]);
-    sort(a.begin(), a.end());
-    for (auto v : a)
-        cout << v << " ";
+        cin >> n;
+    for (int i = 1; i <= n; i++)
+        cin >> a[i];
+    sort(a + 1, a + 1 + n / 2);
+    sort(a + n / 2 + 1, a + 1 + n, greater<>());
 }
-
-int main(int argc, char *argv[])
+void q2()
+{
+        int i = 1;
+        cin >> m;
+        b[0] = - 1e9;
+        while (i <= m)
+    
+    {
+                cin >> b[i];
+                if  (b[i] >= b[i - 1])
+            i++;
+                else         
+        {
+                        cout << "input again";
+        }
+            
+    }
+}
+void q3()
+{
+        k = 1;
+        int i = 1, j = 1;
+        while (i <= n / 2 && j <= m)
+        if  (a[i] < b[j])
+            c[k++] = a[i++];
+            else             c[k++] = b[j++];
+        while (i <= n / 2)
+        c[k++] = a[i++];
+        while (j <= m)
+        c[k++] = b[j++];
+        k--;
+}
+void q4()
+{
+        if  (k % 2 == 0)
+        cout << (c[k / 2] + c[k / 2 + 1]) / 2;
+        else         cout << c[k / 2 + 1];
+}
+int main()
 {
 
-    // int n;
-    // string str[N];
-    // cin >> n;
-    // for (int i = 0; i < n; i++)
-    //     cin >> str[i];
-    int n = atoi(argv[1]);
-    string str[n];
-    for (int i = 0; i < n; i++)
-        str[i] = argv[i + 2];
-    ex2(n, str);
+        q1();
+        q2();
+        q3();
+        q4();
+    for (int i = 1; i <= k; i++)
+        cout << c[i] << " ";
 }

@@ -4,9 +4,10 @@
 #define pp pair<int, int>
 #define fastio ios_base::sync_with_stdio(false), cin.tie(NULL);
 #define reset(x, val) memset(x, val, sizeof(x))
-#define quyen_sort(x, size) sort(x + 1, x + 1 + size);
+#define sort_arr(x, size) sort(x + 1, x + 1 + size);
+#define sort_vec(x) sort(x.begin(), x.end());
 using namespace std;
-int n, level[N], lgn, dp[N][int(log2(N + 10)) + 3];
+int n, level[N], lgn, dp[N][20];
 vector<int> vertices[N];
 
 void dfs(int u, int preu)
@@ -24,44 +25,47 @@ void dfs(int u, int preu)
         dfs(v, u);
     }
 }
+int lca(int u, int v)
+{
+    int res = 0;
+    if (level[u] < level[v])
+        swap(u, v);
+    unsigned int diff = level[u] - level[v];
+    for (int i = lgn; i >= 0; i--)
+    {
+        if (1 << i & diff)
+        {
+            u = dp[u][i];
+            res += pow(2, i);
+        }
+    }
+    if (u == v)
+        return res;
+    for (int i = lgn; i >= 0; i--)
+        if (dp[u][i] != dp[v][i])
+        {
+            u = dp[u][i];
+            v = dp[v][i];
+            res += pow(2, i) * 2;
+        }
+    return res + 2;
+}
 
 int main()
 {
-    //freopen("test_input.txt", "r", stdin);
-    fastio;
-    reset(level, 0);
-    reset(dp, -1);
-    int x, y, q;
-
+    int q, x, y;
+    reset(level, 0), reset(dp, -1);
     cin >> n >> q;
     lgn = ceil(log2(n));
     for (int i = 2; i <= n; i++)
     {
-        cin >> x;
-        y = i;
+        cin >> x >> y;
         vertices[x].push_back(y), vertices[y].push_back(x);
     }
     dfs(1, 1);
-    for (int i = 1; i <= lgn; i++)
-        dp[1][i] = -1;
     while (q--)
     {
         cin >> x >> y;
-        int i = 0;
-        if (level[x] < y)
-            y = x = -1;
-        while (y > 0)
-        {
-            if (y & 1)
-                x = dp[x][i];
-            y >>= 1, i++;
-        }
-        cout << x << endl;
+        cout << lca(x, y) << endl;
     }
-    // for (int i = 1; i <= n; i++)
-    // {
-    //     for (int j = 0; j < lgn; j++)
-    //         cout << dp[i][j] << " ";
-    //     cout << endl;
-    // }
 }
