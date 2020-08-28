@@ -58,6 +58,8 @@ int main(int argc, char *argv[])
     char n1[] = "111";
     char n2[] = "1111";
     ex4(n1, n2);
+    char *x[10];
+    x[1] = "111";
 
     return 0;
 }

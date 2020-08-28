@@ -11,10 +11,8 @@ void displayBits(unsigned value)
     unsigned c, displayMask = 1 << 31;
     for (int i = 1; i <= 32; i++)
     {
-        // unsigned t = (value & displayMask);
-        // cout << t << endl;
+       
         putchar(value & displayMask ? '1' : '0');   
-        
         value <<= 1;
         if (i % 8 == 0)
             cout << ' ';

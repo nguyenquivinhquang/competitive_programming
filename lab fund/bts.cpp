@@ -22,6 +22,7 @@ Node *insertNode(Node *root, int x)
         root->left = insertNode(root->left, x);
     else if (x > root->key)
         root->right = insertNode(root->right, x);
+    
     return root;
 }
 void createTree(Node *&root, int a[], int n)
