@@ -21,7 +21,7 @@ void solve()
         else
             pos[0][i] = pos[0][i - 1];
     }
-    for (int i = 1; i <= n; i++)
+    for (int i = 1; i <= 1; i++)
     {
         for (int j = 1; j <= n; j++)
         {
@@ -29,13 +29,13 @@ void solve()
             int remaining = prefix[j] - out[i - 1][min_pos] - lift[j];
             dp[i][j] = dp[i - 1][min_pos] + remaining * pow(2, j - min_pos - 1) + prefix[n] - prefix[j];
             out[i][j] += lift[j];
-            if (dp[i][j] > dp[i][j - 1] && j - 1 > 0)
-            {
-                dp[i][j] = dp[i][j - 1];
-                pos[i][j] = pos[i][j - 1];
-            }
-            else
-                pos[i][j] = j;
+            // if (dp[i][j] > dp[i][j - 1] && j - 1 > 0)
+            // {
+            //     dp[i][j] = dp[i][j - 1];
+            //     pos[i][j] = pos[i][j - 1];
+            // }
+            // else
+            //     pos[i][j] = j;
             cout << dp[i][j] << " ";
         }
         res = min(res, dp[i][n]);
