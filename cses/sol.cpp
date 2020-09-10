@@ -1,87 +1,76 @@
+// https://cses.fi/problemset/task/1193/
+#include <algorithm>
 #include <iostream>
 #include <vector>
+#include <tuple>
+#include <queue>
 
 using namespace std;
 
-typedef long long ll;
-typedef vector<ll> vi;
+typedef tuple<int, int, int> iii;
+typedef vector<char> vc;
+typedef vector<vc> vvc;
+typedef vector<int> vi;
 typedef vector<vi> vvi;
+typedef queue<iii> q;
 
-int n, q, k;
-vvi g;
-vi c, s, s2, v, id, m, t;
-
-ll sum(int k)
-{
-    ll s = 0;
-    while (k >= 1)
-    {
-        s += t[k];
-        k -= k & -k;
+int main() {
+  int n, m;
+  cin >> n >> m;
+  vvc a(n);
+  vvi b(n);
+  int ai, aj, bi, bj;
+  for (int i = 0; i < n; i++) {
+    a[i] = vc(m);
+    b[i] = vi(m, -1);
+    for (int j = 0; j < m; j++) {
+      cin >> a[i][j];
+      if (a[i][j] == 'A') {
+        ai = i; aj = j;
+      } else if (a[i][j] == 'B') {
+        bi = i; bj = j;
+      }
     }
-    return s;
-}
-
-ll sum(int a, int b)
-{
-    return sum(b) - sum(a - 1);
-}
-
-void add(int i, ll x)
-{
-    for (; i <= n; i += i & -i) t[i] += x;
-}
-
-void dfs(int u, int p)
-{
-    id.push_back(u);
-    s[u] = s[p] + v[u];
-    c[u] = 1;
-    for (auto z : g[u])
-    {
-        if (z == p) continue;
-        dfs(z, u);
-        c[u] += c[z];
-    }
-}
-
-int main()
-{
-    cin >> n >> q;
-    g = vvi(n + 1);
-    v = vi(n + 1);
-    s = vi(n + 1);
-    s2 = vi(n + 1);
-    c = vi(n + 1);
-    id = vi(1);
-    for (int i = 1; i <= n; i++) cin >> v[i];
-    for (int i = 0; i < n - 1; i++)
-    {
-        int u, v;
-        cin >> u >> v;
-        g[u].push_back(v);
-        g[v].push_back(u);
-    }
-    for (k = 1; k < n; k *= 2);
-    t = vi(k + 1);
-    dfs(1, 0);
-    m = vi(n + 1);
-    for (int i = 1; i <= n; i++) m[id[i]] = i;
-    s2[1] = s[id[1]];
-    for (int i = 2; i <= n; i++) s2[i] = s[id[i]] - s[id[i - 1]];
-    for (int i = 1; i <= n; i++) add(i, s2[i]);
-    while (q--)
-    {
-        int x, y, z;
-        cin >> x >> y;
-        if (x == 1)
-        {
-            cin >> z;
-            int dd = z - v[y];
-            add(m[y], dd);
-            add(m[y] + c[y], -dd);
-            v[y] = z;
+  }
+  q q;
+  q.push(make_tuple(ai, aj, 0));
+  while (!q.empty()) {
+    int i, j, k;
+    tie(i, j, k) = q.front();
+    q.pop();
+    if (b[i][j] != -1) continue;
+    b[i][j] = k;
+    if (i == bi && j == bj) {
+      cout << "YES\n" << b[i][j] << endl;
+      string p;
+      while (i != ai || j != aj) {
+        if (i > 0 && b[i - 1][j] == k - 1) {
+          p.push_back('D');
+          i--;
+        } else if (i < n - 1 && b[i + 1][j] == k - 1) {
+          p.push_back('U');
+          i++;
+        } else if (j > 0 && b[i][j - 1] == k - 1) {
+          p.push_back('R');
+          j--;
+        } else {
+          p.push_back('L');
+          j++;
         }
-        else cout << sum(m[y]) << endl;
+        k--;
+      }
+      reverse(p.begin(), p.end());
+      cout << p << endl;
+      return 0;
     }
+    if (i > 0 && a[i - 1][j] != '#' && b[i - 1][j] == -1)
+      q.push(make_tuple(i - 1, j, k + 1));
+    if (i < n - 1 && a[i + 1][j] != '#' && b[i + 1][j] == -1)
+      q.push(make_tuple(i + 1, j, k + 1));
+    if (j > 0 && a[i][j - 1] != '#' && b[i][j - 1] == -1)
+      q.push(make_tuple(i, j - 1, k + 1));
+    if (j < m - 1 && a[i][j + 1] != '#' && b[i][j + 1] == -1)
+      q.push(make_tuple(i, j + 1, k + 1));
+  }
+  cout << "NO\n";
 }

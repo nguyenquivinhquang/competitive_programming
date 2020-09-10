@@ -1,5 +1,7 @@
 
 *.jpg
 *.exe
+*.txt
+*.cfg
 codeforces/problemset/1398D
 codeforces/problemset/1398C
