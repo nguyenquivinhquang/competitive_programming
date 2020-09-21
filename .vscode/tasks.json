@@ -2,16 +2,16 @@
     "tasks": [
         {
             "type": "shell",
-            "label": "C/C++: g++ build active file",
-            "command": "/usr/bin/g++",
+            "label": "C/C++: g++.exe build active file",
+            "command": "C:/MinGW/bin/g++.exe",
             "args": [
                 "-g",
                 "${file}",
                 "-o",
-                "${fileDirname}/${fileBasenameNoExtension}"
+                "${fileDirname}\\${fileBasenameNoExtension}.exe"
             ],
             "options": {
-                "cwd": "${workspaceFolder}"
+                "cwd": "C:/MinGW/bin"
             },
             "problemMatcher": [
                 "$gcc"
