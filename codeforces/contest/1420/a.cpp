@@ -1,6 +1,5 @@
-//J jailbreak
 #include <bits/stdc++.h>
-#define N 100
+#define N 50005
 #define ll long long
 #define pp pair<int, int>
 #define fastio ios_base::sync_with_stdio(false), cin.tie(NULL);
@@ -11,10 +10,31 @@
 #define input_file freopen("r", "input.txt", stdin);
 #define output_file freopen("w", "output.txt", stdout);
 using namespace std;
-int n, m;
-char a[N][N];
+void solve()
+{
+    int n, a[N];
+    cin >> n;
+    for (int i = 1; i <= n; i++)
+    {
+        cin >> a[i];
+    }
+    int c = 0;
+    for (int i = 2; i <= n; i++)
+    {
+        if (a[i] < a[i - 1])
+            c++;
+    }
+    if (c == n - 1)
+        cout << "NO \n";
+    else
+        cout << "YES \n";
+}
 int main()
 {
     int testcase;
     cin >> testcase;
+    while (testcase--)
+    {
+        solve();
+    }
 }
