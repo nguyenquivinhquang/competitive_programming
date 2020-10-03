@@ -9,7 +9,7 @@
 #define endl '\n'
 #define input_file freopen("input.txt", "r", stdin);
 #define output_file freopen("output.txt", "w", stdout);
-
+ 
 using namespace std;
 ll n, k, count_snt = 0, a[N];
 ll gcd(ll x, ll y)
@@ -29,6 +29,7 @@ ll lcm(ll a, ll b)
 }
 void solve2()
 {
+    //int size = n + 5;
     bool fee[1000009];
     reset(fee, true);
     for (int i = 1; i <= k; i++)
@@ -56,23 +57,15 @@ int solve1()
 {
     ll trace[30];
     reset(trace, 0);
-    map<ll, int> tt;
-    vector<ll> t;
-    ll limit = 1, temp;
-
-    for (int i = 1; i <= k; i++)
-    {
-        cin >> temp;
-        tt[temp] = 1;
-    }
-    int k = 0;
-    for (auto v : tt)
-        a[++k] = v.first;
+    ll limit = 1;
     for (int i = 1; i <= k; i++)
         limit *= 2;
-
+    for (int i = 1; i <= k; i++)
+        cin >> a[i];
+	//cout << limit << endl;
     for (int i = 0; i < limit; i++)
     {
+        // cout << i << ' ' << limit << endl;
         ll Lcm = 1;
         int countBit = 0;
         for (int j = 0; j < k; j++)
@@ -89,9 +82,10 @@ int solve1()
         {
             trace[countBit] += (n - 1) / Lcm;
         }
+ 
     }
     ll res1 = 0, res2 = 0;
-    for (int i = 0; i <= k; i++)
+    for (int i = 0; i < k; i++)
     {
         if (i % 2 == 0)
             res1 += trace[i];
@@ -103,7 +97,7 @@ int solve1()
 }
 int main()
 {
-    fastio;
+    //fastio;
     cin >> n >> k;
     if (k <= 20)
         solve1();

@@ -1,5 +1,5 @@
 #include <bits/stdc++.h>
-#define N 101
+#define N 100
 #define ll long long
 #define pp pair<int, int>
 #define fastio ios_base::sync_with_stdio(false), cin.tie(NULL);
@@ -13,14 +13,8 @@ using namespace std;
 
 int main()
 {
-    int c = 0;
-    output_file;
-    srand(time(NULL));
+    __int128 a = 1000000000000;
 
-    cout << "10000000000 20 \n";
-    for (int i = 1; i <= 20 ; i++)
-    {
-        int res = rand() % 10000000000;
-        cout << res << endl;
-    }
+    ll testcase = a;
+    cout << testcase;
 }
