@@ -1,5 +1,5 @@
 #include <bits/stdc++.h>
-#define N 101
+#define N 100
 #define ll long long
 #define pp pair<int, int>
 #define fastio ios_base::sync_with_stdio(false), cin.tie(NULL);
@@ -10,20 +10,28 @@
 #define input_file freopen("input.txt", "r", stdin);
 #define output_file freopen("output.txt", "w", stdout);
 using namespace std;
-
+multiset<int> a;
+void solve()
+{
+    vector<pp> a;
+    int n, cur;
+    cin >> n;
+    cur = n;
+    for (int i = n - 1; i >= 1; i--)
+    {
+        a.push_back({cur, i});
+        cur = (cur + 1 + i) / 2;
+    }
+    cout << cur << endl;
+    for (auto v : a)
+        cout << v.first << " " << v.second << endl;
+}
 int main()
 {
-    int c = 0;
-    output_file;
-    srand(time(NULL));
-
-    for (int i = 1; i <= 8; i++)
+    int testcase;
+    cin >> testcase;
+    while (testcase--)
     {
-        for (int j = 1; j <= 8; j++)
-        {
-
-            cout << -1 << " ";
-        }
-        cout << endl;
+        solve();
     }
 }

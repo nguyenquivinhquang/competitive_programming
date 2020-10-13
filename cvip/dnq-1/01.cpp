@@ -1,21 +1,22 @@
 #include <bits/stdc++.h>
-#define maxn 10005
+#define maxn 100005
 #define ll long long
 #define el '\n'
 #define mod %
 #define inf "INFINITY"
 
 using namespace std;
-struct data
+struct datadt
 {
     double x, y;
 };
 
-data a[maxn];
+datadt a[maxn];
 
 int n;
 double res;
-bool condition(data &a1, data &a2)
+datadt res1, res2;
+bool condition(datadt &a1, datadt &a2)
 {
     if (a1.x > a2.x)
         return false;
@@ -25,10 +26,12 @@ bool condition(data &a1, data &a2)
         return false;
     else if (a1.y < a2.y)
         return true;
+    return true;
 }
 
 void input()
 {
+    a[0].x = a[0].y = 0;
     for (int i = 1; i <= n; i++)
     {
         cin >> a[i].x >> a[i].y;
@@ -36,7 +39,7 @@ void input()
     sort(a, a + n + 1, condition);
     res = 100000000.0;
 }
-double distance(data &x, data &y)
+double distance(datadt &x, datadt &y)
 {
     double temp = 0.0;
     temp = temp + sqrt((x.x - y.x) * (x.x - y.x) + (x.y - y.y) * (x.y - y.y));
@@ -51,48 +54,37 @@ double closet_two_ponits(int l, int r)
     double d = 0.0000; // distance
     int mid = (l + r) / 2;
 
-    closet_two_ponits(l, mid-1);
-    closet_two_ponits(mid+1, r);
+    closet_two_ponits(l, mid - 1);
+    closet_two_ponits(mid + 1, r);
 
-    for (int i = mid; i >=l; i--)
+    for (int i = mid; i >= l; i--)
     {
-        d = distance(a[i], a[mid])+0.0;
+        d = distance(a[i], a[mid]) + 0.0;
         if (d < res && i != mid)
             res = d;
-        for (int j = mid; j<=r ; j++)
-        if (i!=j)
-        {
-            d = distance(a[i], a[j]);
-            if (d <= res)
-                res = d;
-            if (abs(a[j].x-a[i].x)>res)
-                break;
-        }
+        for (int j = mid; j <= r; j++)
+            if (i != j)
+            {
+                d = distance(a[i], a[j]);
+                if (d <= res)
+                {
+                    res = d;
+                    res1 = a[i], res2 = a[j];
+                }
+                if (abs(a[j].x - a[i].x) > res)
+                    break;
+            }
     }
-}
-void debug()
-{
-    ofstream write ("debug_01.txt");
-    write << "debug" << el << el;
-    for (int i = 1; i <= n; i++)
-    {
-        write << a[i].x << " " << a[i].y << el;
-    }
+    return -1;
 }
 void output()
 {
-    cout <<fixed<< setprecision(4);
-    if (res < 10000)
-        cout<<res;
-    else
-        cout << inf;
-    cout << el;
+    cout << fixed << setprecision(2);
+    cout << res1.x << " " << res1.y << " " << res2.x << " " << res2.y << endl;
 }
 int main()
 {
-    cout << setprecision(5);
-    ios::sync_with_stdio(false); cin.tie(0);
-
+    //cout << setprecision(2);
     while ("quang" != "trash")
     {
         cin >> n;
@@ -101,18 +93,5 @@ int main()
         input();
         closet_two_ponits(1, n);
         output();
-        
     }
-    
 }
-
-/*demo test
-
-    5
-    0 2
-    6 67
-    43 71
-    39 107
-    189 140
-
-    */

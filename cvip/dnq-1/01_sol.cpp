@@ -1,6 +1,5 @@
-#include <iostream>
-#include <cmath>
-#include <algorithm>
+#include <bits/stdc++.h>
+#define fastio ios_base::sync_with_stdio(false), cin.tie(NULL);
 using namespace std;
 
 struct point
@@ -18,7 +17,7 @@ bool cmp_y(const point &a, const point &b)
     return a.y < b.y;
 }
 
-#define MAXN 100000
+#define MAXN 100007
 point a[MAXN];
 point res_a, res_b;
 double mindist; // biến lưu kết quả bài toán
@@ -30,8 +29,8 @@ void upd_ans(const point &a, const point &b)
     if (dist < mindist)
     {
         mindist = dist;
-        res_a=a;
-        res_b=b;
+        res_a = a;
+        res_b = b;
     }
 }
 
@@ -54,7 +53,8 @@ void find(int l, int r)
     find(l, m);
     find(m + 1, r);
 
-    static point t[MAXN];
+    point t[r - l + 10];
+    memset(t, -1, sizeof(t));
     // trộn a[l,m] và a[m+1,r] lại, lưu vào mảng tạm t
     merge(a + l, a + m + 1, a + m + 1, a + r + 1, t, cmp_y);
     // copy từ t về lại a
@@ -75,19 +75,24 @@ void find(int l, int r)
 
 int main()
 {
-    ios::sync_with_stdio(false);
-    cin.tie(0);
-
+    fastio;
     int n;
-    cin >> n;
-    for (int i = 0; i < n; i++)
-        cin >> a[i].x >> a[i].y;
+    while (1)
+    {
+        memset(a, -1, sizeof(a));
+        cin >> n;
+        if (n == 0)
+            break;
+        for (int i = 0; i < n; i++)
+            cin >> a[i].x >> a[i].y;
 
-    mindist = 1E20;
-    sort(a, a + n, cmp_x);
-    find(0, n - 1);
+        mindist = 1E20;
+        sort(a, a + n, cmp_x);
+        find(0, n - 1);
 
-    printf("%.3lf", mindist);
-    cout<<"   "<<res_b.x<<" "<<res_b.y<<"va "<<res_a.x<<" "<<res_a.y<<endl;
+        //printf("%.3lf", mindist);
+        cout << fixed << setprecision(2);
+        cout << res_b.x << " " << res_b.y << " " << res_a.x << " " << res_a.y << endl;
+    }
     return 0;
 }

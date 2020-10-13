@@ -63,10 +63,10 @@ void debug(int n)
 int main()
 {
 
-    ios::sync_with_stdio(false);
-    cin.tie(0);
-    freopen("D:\\c++\\cvip\\dnq-1\\4.in", "r", stdin);
-    freopen("4.out", "w", stdout);
+    // ios::sync_with_stdio(false);
+    // cin.tie(0);
+    // freopen("D:\\c++\\cvip\\dnq-1\\4.in", "r", stdin);
+    // freopen("4.out", "w", stdout);
 
     int n, testcase, sum;
     cin >> testcase;
@@ -79,7 +79,7 @@ int main()
             cin >> a[i];
         sum = 0;
         mergesort(1, n);
-        debug(n);
+        //debug(n);
         cout << kq << endl;
     }
     return 0;

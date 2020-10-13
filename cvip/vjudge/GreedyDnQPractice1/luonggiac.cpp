@@ -1,5 +1,5 @@
 #include <bits/stdc++.h>
-#define N 101
+#define N 100005
 #define ll long long
 #define pp pair<int, int>
 #define fastio ios_base::sync_with_stdio(false), cin.tie(NULL);
@@ -13,17 +13,24 @@ using namespace std;
 
 int main()
 {
-    int c = 0;
+    double a[N];
     output_file;
-    srand(time(NULL));
-
-    for (int i = 1; i <= 8; i++)
+    double pi = 2 * acos(0.0);
+    int testcase;
+    for (int i = 1; i <= 100000; i++)
+        a[i] = sin(i);
+    int dp[N];
+    reset(dp, 0);
+    for (int i = 2; i <= 100000; i++)
     {
-        for (int j = 1; j <= 8; j++)
+        if (a[i] > a[i - 1])
         {
-
-            cout << -1 << " ";
+            dp[i] = dp[i - 1] + 1;
+            cout << i << ": " << fixed << setprecision(5) << a[i] << endl;
         }
-        cout << endl;
+        else
+            dp[i] = 1;
     }
+    // for (int i = 1; i <= 100000; i++)
+    //     cout << dp[i] << endl;
 }

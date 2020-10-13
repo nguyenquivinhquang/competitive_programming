@@ -1,5 +1,5 @@
 #include <bits/stdc++.h>
-#define N 101
+#define N 200005
 #define ll long long
 #define pp pair<int, int>
 #define fastio ios_base::sync_with_stdio(false), cin.tie(NULL);
@@ -10,20 +10,32 @@
 #define input_file freopen("input.txt", "r", stdin);
 #define output_file freopen("output.txt", "w", stdout);
 using namespace std;
+ll a[N], n, k;
+void solve()
+{
+    cin >> n >> k;
+    for (int i = 1; i <= n; i++)
+        cin >> a[i];
+    sort(a + 1, a + 1 + n);
+    int b = 1;
 
+    for (int i = n - 1; i >= 1; i--)
+    {
+        if (i == n || k == 0)
+            break;
+        a[n] += a[i];
+        a[i] = 0;
+        k--;
+    }
+    cout << a[n] << endl;
+}
 int main()
 {
-    int c = 0;
-    output_file;
-    srand(time(NULL));
-
-    for (int i = 1; i <= 8; i++)
+    //fastio;
+    int testcase;
+    cin >> testcase;
+    while (testcase--)
     {
-        for (int j = 1; j <= 8; j++)
-        {
-
-            cout << -1 << " ";
-        }
-        cout << endl;
+        solve();
     }
 }
