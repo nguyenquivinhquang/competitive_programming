@@ -42,6 +42,7 @@ int main()
         //if (trace[n]==false) break;
         //trace[n]=false;
         res++;
+        cout << lat(n) << endl;
         n=n+lat(n);
         if(res==75) break;
     }

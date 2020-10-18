@@ -27,7 +27,7 @@ void join(int u, int v)
     if (Rank[u] == Rank[v])
         Rank[u]++;
     if (Rank[u] > Rank[v])
-        root[v] = u;
+        root[v] = u; 
     else
         root[u] = v;
 }

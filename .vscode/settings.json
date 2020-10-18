@@ -70,7 +70,9 @@
         "streambuf": "cpp",
         "thread": "cpp",
         "typeindex": "cpp",
-        "typeinfo": "cpp"
+        "typeinfo": "cpp",
+        "rope": "cpp",
+        "slist": "cpp"
     },
     "C_Cpp.errorSquiggles": "Enabled"
 }

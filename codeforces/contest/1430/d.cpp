@@ -11,39 +11,42 @@
 #define output_file freopen("output.txt", "w", stdout);
 using namespace std;
 int n;
-string x;
+string s;
 void solve()
 {
-    cin >> n >> x;
-    int prefix[N];
-    reset(prefix, 0);
-    prefix[0] = 1;
-    for (int i = 1; i < n; i++)
-        if (x[i] == x[i - 1])
+    cin >> n >> s;
+
+    vector<int> v;
+    for (int i = 0; i < n; i++)
+    {
+        if (i == 0 || s[i - 1] != s[i])
         {
-            prefix[i] = prefix[i - 1] + 1;
-            prefix[i - 1] = -1;
+            v.push_back(1);
         }
         else
-            prefix[i] = 1;
-    int a[N], ss = 1, ee = 1, res = 0;
-    for (int i = 0; i < n; i++)
-        if (prefix[i] != -1)
-            a[ee++] = prefix[i];
-    ee--;
-    //cout << ss <<" " << ee << endl;
-    //     for (int i = ss; i <= ee; i++)
-    //        cout << a[i] << " ";
-    //     cout << endl;
-    int m = ee;
-    while (ss <= ee)
-    {
-        if (a[ss] == 1)
-            ss++, ee--;
-        else
-            ss++;
-        res++;
+        {
+            v.back()++;
+        }
     }
+
+    int i = 0, j = 0, res = 0;
+    while (i < v.size())
+    {
+        res++;
+        j = max(j, i);
+        while (j < v.size() && v[j] == 1)
+            j++;
+
+        if (j < v.size())
+            v[j]--;
+        else
+        {
+            i++;
+        }
+
+        i++;
+    }
+
     cout << res << endl;
 }
 int main()

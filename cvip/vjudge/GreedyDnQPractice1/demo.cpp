@@ -8,13 +8,24 @@
 #define sort_vec(x) sort(x.begin(), x.end());
 #define endl '\n'
 #define input_file freopen("input.txt", "r", stdin);
-#define output_file freopen("output.txt", "w", stdout);
+#define output_file freopen("input.txt", "w", stdout);
 using namespace std;
 
 int main()
 {
-    int testcase;
-    vector<int> a(10);
-    a.push_back(1);
-    a.size();
+    srand(time(NULL));
+    output_file;
+    for (int t = 1; t <= 3; t++)
+    {
+        cout << 10 << endl;
+        for (int i = 1; i <= 10; i++)
+        {
+
+            double x = rand() % (100) - 30;
+            double y = rand() % (100) - 30;
+            cout << x << " " << y << endl;
+        }
+    }
+
+    cout << 0;
 }

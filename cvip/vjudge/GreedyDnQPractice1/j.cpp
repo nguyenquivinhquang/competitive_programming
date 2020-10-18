@@ -1,5 +1,5 @@
-#pragma GCC optimize("O3")
-#pragma GCC optimization("unroll-loops")
+// #pragma GCC optimize("O3")
+// #pragma GCC optimization("unroll-loops")
 #include <bits/stdc++.h>
 #define N 100005
 #define ll long long
@@ -11,6 +11,7 @@
 #define endl '\n'
 #define input_file freopen("input.txt", "r", stdin);
 #define output_file freopen("output.txt", "w", stdout);
+
 using namespace std;
 bool cmpx(pp x, pp y)
 {
@@ -27,76 +28,79 @@ bool cmpy(pp x, pp y)
 }
 int n;
 pp a[N], res1, res2, t[N];
-
+double dres;
 double distance(pp &x, pp &y)
 {
     return sqrt((x.first - y.first) * (x.first - y.first) + (x.second - y.second) * (x.second - y.second));
 }
-double update(pp &x, pp &y, double &dis)
+double update(pp &x, pp &y)
 {
     double d = distance(x, y);
-    if (d < dis)
+    if (d <= dres)
     {
         res1 = x, res2 = y;
-        dis = d;
+        dres = d;
+        //cout << res1.first << " " << res1.second << " " << res2.first << " " << res2.second << ": " << dres << endl;
         return d;
     }
     else
-        return dis;
+        return dres;
 }
 double vet(int l, int r)
 {
-    double d = 1e12;
+
     for (int i = l; i <= r; i++)
         for (int j = i + 1; j <= r; j++)
-            update(a[i], a[j], d);
-    return d;
+            update(a[i], a[j]);
+    // if (d == 1)
+    //     cout << "hihi";
+    return dres;
 }
 double closetPoints(int l, int r)
 {
-    if (r - l + 1 < 3)
+    if (r - l + 1 <= 3)
         return vet(l, r);
     int mid = (l + r) >> 1;
     double d1 = closetPoints(l, mid);
     double d2 = closetPoints(mid + 1, r);
-    double d = min(d1, d2);
-
+    //double d = min(d1, d2);
+    // if (d == 1)
+    //     cout << "hihi";
     int size = 0;
     for (int i = mid; i >= l; i--)
     {
-        if (abs(a[i].first - a[mid].first) > d)
+        if (abs(a[i].first - a[mid].first) > dres)
             continue;
         t[size++] = a[i];
     }
 
     for (int i = mid + 1; i <= r; i++)
     {
-        if (abs(a[i].first - a[mid].first) > d)
+        if (abs(a[i].first - a[mid].first) > dres)
             continue;
         t[size++] = a[i];
     }
 
-    sort(t, t + size, cmpy);
+    sort(t, t + size , cmpy);
     for (int i = 0; i < size; i++)
     {
         for (int j = i + 1; j < size; j++)
         {
-            update(t[i], t[j], d);
-            if (abs(t[i].second - t[j].second) > d) break;
+            if (abs(t[i].second - t[j].second) > dres)
+                break;
+            update(t[i], t[j]);
         }
     }
-    sort(a + l, a + r + 1, cmpy);
-    return d;
-}
-void solve()
-{
+    return dres;
 }
 int main()
 {
+    //input_file;
     fastio;
     int testcase;
     while (cin >> n)
     {
+        dres = 1e13;
         if (n == 0)
             break;
         for (int i = 1; i <= n; i++)
