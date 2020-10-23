@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="cp1" targetName="cp1" />
+      <config projectName="cp1" targetName="B" />
+      <config projectName="cp1" targetName="a" />
+      <config projectName="cp1" targetName="K" />
+      <config projectName="cp1" targetName="F" />
+      <config projectName="cp1" targetName="g" />
+      <config projectName="cp1" targetName="E" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="61c0bece-4d7c-4277-8ee3-204ffb5719f6" name="Default Changelist" comment="Quang">
+      <change afterPath="$PROJECT_DIR$/codeforces/problemset/1433.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cvip/vjudge/Mashup1510/E.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/launch.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/launch.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/tasks.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/tasks.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cvip/vjudge/GreedyDnQPractice1/K.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/cvip/vjudge/GreedyDnQPractice1/K.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cvip/vjudge/Mashup1510/F.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/cvip/vjudge/Mashup1510/F.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cvip/vjudge/Mashup1510/g.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/cvip/vjudge/Mashup1510/g.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spoj/NAJPF.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/spoj/NAJPF.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spoj/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/spoj/input.txt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="OCResolveContextSettings">
+    <option name="configuration" value="0-Debug-a" />
+  </component>
+  <component name="ProjectId" id="1j3RH4us7Nyk8fa6waYQjpX7fS7" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cf.first.check.clang-format" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="ObjectiveC" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
+  </component>
+  <component name="RunManager" selected="CMake Application.E">
+    <configuration name="B" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cp1" TARGET_NAME="B" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="cp1" RUN_TARGET_NAME="B">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="E" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cp1" TARGET_NAME="E" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="cp1" RUN_TARGET_NAME="E">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="F" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cp1" TARGET_NAME="F" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="cp1" RUN_TARGET_NAME="F">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="K" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cp1" TARGET_NAME="K" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="cp1" RUN_TARGET_NAME="K">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="a" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cp1" TARGET_NAME="a" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="cp1" RUN_TARGET_NAME="a">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="cp1" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="cp1" RUN_TARGET_NAME="cp1" EXPLICIT_BUILD_TARGET_NAME="all">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="g" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cp1" TARGET_NAME="g" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="cp1" RUN_TARGET_NAME="g">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="CMake Application.B" />
+      <item itemvalue="CMake Application.E" />
+      <item itemvalue="CMake Application.F" />
+      <item itemvalue="CMake Application.K" />
+      <item itemvalue="CMake Application.a" />
+      <item itemvalue="CMake Application.cp1" />
+      <item itemvalue="CMake Application.g" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Quang" />
+    <option name="LAST_COMMIT_MESSAGE" value="Quang" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="130" y="16" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603031391393">
+      <screen x="69" y="0" width="1211" height="720" />
+    </state>
+    <state x="130" y="16" key="#com.intellij.execution.impl.EditConfigurationsDialog/69.0.1211.720@69.0.1211.720" timestamp="1603031391393" />
+    <state x="455" y="116" key="FileChooserDialogImpl" timestamp="1603031014428">
+      <screen x="69" y="0" width="1211" height="720" />
+    </state>
+    <state x="455" y="116" key="FileChooserDialogImpl/69.0.1211.720@69.0.1211.720" timestamp="1603031014428" />
+    <state width="1815" height="339" key="GridCell.Tab.0.bottom" timestamp="1603249278573">
+      <screen x="55" y="27" width="1865" height="1053" />
+    </state>
+    <state width="1815" height="339" key="GridCell.Tab.0.bottom/55.27.1865.1053@55.27.1865.1053" timestamp="1603249278573" />
+    <state width="1172" height="141" key="GridCell.Tab.0.bottom/65.0.1215.720@65.0.1215.720" timestamp="1603156598391" />
+    <state width="1429" height="141" key="GridCell.Tab.0.bottom/65.0.1471.864@65.0.1471.864" timestamp="1603164241791" />
+    <state width="1167" height="141" key="GridCell.Tab.0.bottom/69.0.1211.720@69.0.1211.720" timestamp="1603039403551" />
+    <state width="1419" height="277" key="GridCell.Tab.0.bottom/74.0.1462.864@74.0.1462.864" timestamp="1603180519353" />
+    <state width="1815" height="339" key="GridCell.Tab.0.center" timestamp="1603249278572">
+      <screen x="55" y="27" width="1865" height="1053" />
+    </state>
+    <state width="1815" height="339" key="GridCell.Tab.0.center/55.27.1865.1053@55.27.1865.1053" timestamp="1603249278572" />
+    <state width="1172" height="141" key="GridCell.Tab.0.center/65.0.1215.720@65.0.1215.720" timestamp="1603156598391" />
+    <state width="1429" height="141" key="GridCell.Tab.0.center/65.0.1471.864@65.0.1471.864" timestamp="1603164241791" />
+    <state width="1167" height="141" key="GridCell.Tab.0.center/69.0.1211.720@69.0.1211.720" timestamp="1603039403551" />
+    <state width="1419" height="277" key="GridCell.Tab.0.center/74.0.1462.864@74.0.1462.864" timestamp="1603180519353" />
+    <state width="1815" height="339" key="GridCell.Tab.0.left" timestamp="1603249278569">
+      <screen x="55" y="27" width="1865" height="1053" />
+    </state>
+    <state width="1815" height="339" key="GridCell.Tab.0.left/55.27.1865.1053@55.27.1865.1053" timestamp="1603249278569" />
+    <state width="1172" height="141" key="GridCell.Tab.0.left/65.0.1215.720@65.0.1215.720" timestamp="1603156598391" />
+    <state width="1429" height="141" key="GridCell.Tab.0.left/65.0.1471.864@65.0.1471.864" timestamp="1603164241791" />
+    <state width="1167" height="141" key="GridCell.Tab.0.left/69.0.1211.720@69.0.1211.720" timestamp="1603039403551" />
+    <state width="1419" height="277" key="GridCell.Tab.0.left/74.0.1462.864@74.0.1462.864" timestamp="1603180519353" />
+    <state width="1815" height="339" key="GridCell.Tab.0.right" timestamp="1603249278573">
+      <screen x="55" y="27" width="1865" height="1053" />
+    </state>
+    <state width="1815" height="339" key="GridCell.Tab.0.right/55.27.1865.1053@55.27.1865.1053" timestamp="1603249278573" />
+    <state width="1172" height="141" key="GridCell.Tab.0.right/65.0.1215.720@65.0.1215.720" timestamp="1603156598391" />
+    <state width="1429" height="141" key="GridCell.Tab.0.right/65.0.1471.864@65.0.1471.864" timestamp="1603164241791" />
+    <state width="1167" height="141" key="GridCell.Tab.0.right/69.0.1211.720@69.0.1211.720" timestamp="1603039403551" />
+    <state width="1419" height="277" key="GridCell.Tab.0.right/74.0.1462.864@74.0.1462.864" timestamp="1603180519353" />
+    <state width="1815" height="339" key="GridCell.Tab.1.bottom" timestamp="1603249278575">
+      <screen x="55" y="27" width="1865" height="1053" />
+    </state>
+    <state width="1815" height="339" key="GridCell.Tab.1.bottom/55.27.1865.1053@55.27.1865.1053" timestamp="1603249278575" />
+    <state width="1172" height="220" key="GridCell.Tab.1.bottom/65.0.1215.720@65.0.1215.720" timestamp="1603124763098" />
+    <state width="1167" height="220" key="GridCell.Tab.1.bottom/69.0.1211.720@69.0.1211.720" timestamp="1603038885071" />
+    <state width="1419" height="277" key="GridCell.Tab.1.bottom/74.0.1462.864@74.0.1462.864" timestamp="1603180519353" />
+    <state width="1815" height="339" key="GridCell.Tab.1.center" timestamp="1603249278573">
+      <screen x="55" y="27" width="1865" height="1053" />
+    </state>
+    <state width="1815" height="339" key="GridCell.Tab.1.center/55.27.1865.1053@55.27.1865.1053" timestamp="1603249278573" />
+    <state width="1172" height="220" key="GridCell.Tab.1.center/65.0.1215.720@65.0.1215.720" timestamp="1603124763098" />
+    <state width="1167" height="220" key="GridCell.Tab.1.center/69.0.1211.720@69.0.1211.720" timestamp="1603038885071" />
+    <state width="1419" height="277" key="GridCell.Tab.1.center/74.0.1462.864@74.0.1462.864" timestamp="1603180519353" />
+    <state width="1815" height="339" key="GridCell.Tab.1.left" timestamp="1603249278573">
+      <screen x="55" y="27" width="1865" height="1053" />
+    </state>
+    <state width="1815" height="339" key="GridCell.Tab.1.left/55.27.1865.1053@55.27.1865.1053" timestamp="1603249278573" />
+    <state width="1172" height="220" key="GridCell.Tab.1.left/65.0.1215.720@65.0.1215.720" timestamp="1603124763098" />
+    <state width="1167" height="220" key="GridCell.Tab.1.left/69.0.1211.720@69.0.1211.720" timestamp="1603038885071" />
+    <state width="1419" height="277" key="GridCell.Tab.1.left/74.0.1462.864@74.0.1462.864" timestamp="1603180519353" />
+    <state width="1815" height="339" key="GridCell.Tab.1.right" timestamp="1603249278574">
+      <screen x="55" y="27" width="1865" height="1053" />
+    </state>
+    <state width="1815" height="339" key="GridCell.Tab.1.right/55.27.1865.1053@55.27.1865.1053" timestamp="1603249278574" />
+    <state width="1172" height="220" key="GridCell.Tab.1.right/65.0.1215.720@65.0.1215.720" timestamp="1603124763098" />
+    <state width="1167" height="220" key="GridCell.Tab.1.right/69.0.1211.720@69.0.1211.720" timestamp="1603038885071" />
+    <state width="1419" height="277" key="GridCell.Tab.1.right/74.0.1462.864@74.0.1462.864" timestamp="1603180519353" />
+    <state x="220" y="36" width="914" height="707" key="SettingsEditor" timestamp="1603247400287">
+      <screen x="55" y="27" width="1865" height="1053" />
+    </state>
+    <state x="220" y="36" width="1052" height="737" key="SettingsEditor/55.27.1865.1053@55.27.1865.1053" timestamp="1603247400287" />
+    <state x="172" y="6" width="914" height="707" key="SettingsEditor/65.0.1215.720@65.0.1215.720" timestamp="1603155412236" />
+    <state x="198" y="7" key="SettingsEditor/68.0.1468.864@68.0.1468.864" timestamp="1603092805955" />
+    <state x="176" y="6" key="SettingsEditor/69.0.1211.720@69.0.1211.720" timestamp="1603038689391" />
+    <state x="267" y="94" key="Vcs.Push.Dialog.v2" timestamp="1603035889384">
+      <screen x="69" y="0" width="1211" height="720" />
+    </state>
+    <state x="267" y="94" key="Vcs.Push.Dialog.v2/69.0.1211.720@69.0.1211.720" timestamp="1603035889384" />
+    <state x="492" y="275" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603035862979">
+      <screen x="69" y="0" width="1211" height="720" />
+    </state>
+    <state x="492" y="275" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/69.0.1211.720@69.0.1211.720" timestamp="1603035862979" />
+    <state x="329" y="161" key="run.anything.popup" timestamp="1603122372061">
+      <screen x="65" y="0" width="1215" height="720" />
+    </state>
+    <state x="329" y="161" key="run.anything.popup/65.0.1215.720@65.0.1215.720" timestamp="1603122372061" />
+    <state x="455" y="166" key="save.file.as.template.dialog" timestamp="1603032073387">
+      <screen x="69" y="0" width="1211" height="720" />
+    </state>
+    <state x="455" y="166" key="save.file.as.template.dialog/69.0.1211.720@69.0.1211.720" timestamp="1603032073387" />
+    <state x="335" y="41" width="675" height="679" key="search.everywhere.popup" timestamp="1603119931989">
+      <screen x="65" y="0" width="1215" height="720" />
+    </state>
+    <state x="335" y="41" width="675" height="679" key="search.everywhere.popup/65.0.1215.720@65.0.1215.720" timestamp="1603119931989" />
+    <state x="393" y="49" width="815" height="814" key="search.everywhere.popup/68.0.1468.864@68.0.1468.864" timestamp="1603092515327" />
+    <state x="337" y="41" width="672" height="678" key="search.everywhere.popup/69.0.1211.720@69.0.1211.720" timestamp="1603038605574" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/cvip/vjudge/Mashup1510/E.cpp</url>
+          <line>13</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="CMakeRunConfiguration">
+        <watch expression="a[2][1]" language="ObjectiveC" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>

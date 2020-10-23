@@ -1,7 +1,8 @@
-6 5
-0 0 0 0 1 
-1 0 1 1 0 
-1 0 0 0 0 
-1 0 1 0 0 
-1 1 1 1 0 
-0 1 1 1 1 
+p
+Popup
+helo
+Hello there!
+peek a boo
+you speek a bootiful language
+anas
+bananananaspaj

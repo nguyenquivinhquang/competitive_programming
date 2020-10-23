@@ -1,5 +1,5 @@
 #include <bits/stdc++.h>
-#define N 100
+#define N 100000
 #define ll long long
 #define pp pair<int, int>
 #define fastio ios_base::sync_with_stdio(false), cin.tie(NULL);
@@ -24,28 +24,32 @@ vector<int> prefix_function(string s)
 void solve()
 {
     string a, b;
-    cin >> a >> b;
-    a = b + "$" + a;
-    vector<int> res = prefix_function(a);
-    vector<int> kq;
-    for (int i = 0; i < res.size(); i++)
-        if (res[i] == b.size())
-            kq.push_back(i - 2 * b.size() + 1);
-    if (kq.size() == 0)
-        cout << "Not Found" << endl << endl;
-    else
+    while (1)
     {
-        cout << kq.size() << endl;
-        for (auto v : kq)
-            cout << v << " ";
-        cout << endl
-             << endl;
+        a.clear();
+        b.clear();
+        getline(cin, b);
+        if (b.size() == 0)
+            break;
+        getline(cin, a);
+        a = b + "$" + a;
+        vector<int> res = prefix_function(a);
+        vector<int> kq;
+        for (int i = 0; i < res.size(); i++)
+            if (res[i] == b.size())
+                kq.push_back(i - 2 * b.size() + 1);
+        if (kq.size() == 0)
+            cout << endl;
+        else
+        {
+            for (auto v : kq)
+                cout << v - 1 << " ";
+            cout << endl;
+        }
     }
 }
 int main()
 {
-    int testcase;
-    cin >> testcase;
-    while (testcase--)
-        solve();
+    //freopen("D:\\cp1\\spoj\\input.txt", "r", stdin);
+    solve();
 }
