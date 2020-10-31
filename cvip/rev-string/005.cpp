@@ -19,23 +19,30 @@ char find_S(char x) {
 
     for (auto v : consonants)
         if (x == v) {
-            if (check == false) x = toupper(x);
+            if (check == false)
+                x = toupper(x);
             return x;
         }
     char res = consonants[0];
     for (auto v : consonants) {
-        if (abs(v - x) < abs(res - x)) res = v;
+        if (abs(v - x) < abs(res - x))
+            res = v;
     }
-    if (!check) res = toupper(res);
+    if (!check)
+        res = toupper(res);
     return res;
 }
 string add(char x) {
     // ending = {"b": "ah", "c": "ah", "d": "ah", "g": "ah", "k": "oh", "n":
     // "oh", "p": "oh", "t": "uh"}
-    if (x < 'a') x = tolower(x);
-    if (x == 'b' || x == 'c' || x == 'd' || x == 'g') return "ah";
-    if (x == 'k' || x == 'n' || x == 'p') return "oh";
-    if (x == 't') return "uh";
+    if (x < 'a')
+        x = tolower(x);
+    if (x == 'b' || x == 'c' || x == 'd' || x == 'g')
+        return "ah";
+    if (x == 'k' || x == 'n' || x == 'p')
+        return "oh";
+    if (x == 't')
+        return "uh";
     return "";
 }
 void proccess(string x) {
@@ -63,16 +70,17 @@ void proccess(string x) {
     int i = a.size() - 1;
     int s = a[i].size() - 1;
     a[i] = a[i] + add(a[i][s]);
-    for (auto v : a) cout << v;
-    //cout << " ";
+    for (auto v : a)
+        cout << v;
+    // cout << " ";
 }
 signed main() {
     // ios_base::sync_with_stdio(false), cin.tie(NULL);
     string x;
     int t = 0;
     while (cin >> x) {
-        if (t !=0 )
-            cout <<" ";
+        if (t != 0)
+            cout << " ";
         t++;
         proccess(x);
     }

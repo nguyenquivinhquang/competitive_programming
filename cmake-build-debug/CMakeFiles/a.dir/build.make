@@ -63,10 +63,10 @@ RM = /home/chichcpu/clion-2020.2.4/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/CODE/cp1
+CMAKE_SOURCE_DIR = /mnt/Code/cp1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/CODE/cp1/cmake-build-debug
+CMAKE_BINARY_DIR = /mnt/Code/cp1/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/a.dir/depend.make
@@ -79,29 +79,29 @@ include CMakeFiles/a.dir/flags.make
 
 CMakeFiles/a.dir/cvip/vjudge/GreedyDnQPractice1/a.cpp.o: CMakeFiles/a.dir/flags.make
 CMakeFiles/a.dir/cvip/vjudge/GreedyDnQPractice1/a.cpp.o: ../cvip/vjudge/GreedyDnQPractice1/a.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/CODE/cp1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/a.dir/cvip/vjudge/GreedyDnQPractice1/a.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/a.dir/cvip/vjudge/GreedyDnQPractice1/a.cpp.o -c /mnt/CODE/cp1/cvip/vjudge/GreedyDnQPractice1/a.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/Code/cp1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/a.dir/cvip/vjudge/GreedyDnQPractice1/a.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/a.dir/cvip/vjudge/GreedyDnQPractice1/a.cpp.o -c /mnt/Code/cp1/cvip/vjudge/GreedyDnQPractice1/a.cpp
 
 CMakeFiles/a.dir/cvip/vjudge/GreedyDnQPractice1/a.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/a.dir/cvip/vjudge/GreedyDnQPractice1/a.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/CODE/cp1/cvip/vjudge/GreedyDnQPractice1/a.cpp > CMakeFiles/a.dir/cvip/vjudge/GreedyDnQPractice1/a.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/Code/cp1/cvip/vjudge/GreedyDnQPractice1/a.cpp > CMakeFiles/a.dir/cvip/vjudge/GreedyDnQPractice1/a.cpp.i
 
 CMakeFiles/a.dir/cvip/vjudge/GreedyDnQPractice1/a.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/a.dir/cvip/vjudge/GreedyDnQPractice1/a.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/CODE/cp1/cvip/vjudge/GreedyDnQPractice1/a.cpp -o CMakeFiles/a.dir/cvip/vjudge/GreedyDnQPractice1/a.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/Code/cp1/cvip/vjudge/GreedyDnQPractice1/a.cpp -o CMakeFiles/a.dir/cvip/vjudge/GreedyDnQPractice1/a.cpp.s
 
 CMakeFiles/a.dir/codeforces/problemset/1433.cpp.o: CMakeFiles/a.dir/flags.make
 CMakeFiles/a.dir/codeforces/problemset/1433.cpp.o: ../codeforces/problemset/1433.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/CODE/cp1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/a.dir/codeforces/problemset/1433.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/a.dir/codeforces/problemset/1433.cpp.o -c /mnt/CODE/cp1/codeforces/problemset/1433.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/Code/cp1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/a.dir/codeforces/problemset/1433.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/a.dir/codeforces/problemset/1433.cpp.o -c /mnt/Code/cp1/codeforces/problemset/1433.cpp
 
 CMakeFiles/a.dir/codeforces/problemset/1433.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/a.dir/codeforces/problemset/1433.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/CODE/cp1/codeforces/problemset/1433.cpp > CMakeFiles/a.dir/codeforces/problemset/1433.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/Code/cp1/codeforces/problemset/1433.cpp > CMakeFiles/a.dir/codeforces/problemset/1433.cpp.i
 
 CMakeFiles/a.dir/codeforces/problemset/1433.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/a.dir/codeforces/problemset/1433.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/CODE/cp1/codeforces/problemset/1433.cpp -o CMakeFiles/a.dir/codeforces/problemset/1433.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/Code/cp1/codeforces/problemset/1433.cpp -o CMakeFiles/a.dir/codeforces/problemset/1433.cpp.s
 
 # Object files for target a
 a_OBJECTS = \
@@ -115,7 +115,7 @@ a : CMakeFiles/a.dir/cvip/vjudge/GreedyDnQPractice1/a.cpp.o
 a : CMakeFiles/a.dir/codeforces/problemset/1433.cpp.o
 a : CMakeFiles/a.dir/build.make
 a : CMakeFiles/a.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/CODE/cp1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/Code/cp1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable a"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/a.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -128,6 +128,6 @@ CMakeFiles/a.dir/clean:
 .PHONY : CMakeFiles/a.dir/clean
 
 CMakeFiles/a.dir/depend:
-	cd /mnt/CODE/cp1/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/CODE/cp1 /mnt/CODE/cp1 /mnt/CODE/cp1/cmake-build-debug /mnt/CODE/cp1/cmake-build-debug /mnt/CODE/cp1/cmake-build-debug/CMakeFiles/a.dir/DependInfo.cmake --color=$(COLOR)
+	cd /mnt/Code/cp1/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/Code/cp1 /mnt/Code/cp1 /mnt/Code/cp1/cmake-build-debug /mnt/Code/cp1/cmake-build-debug /mnt/Code/cp1/cmake-build-debug/CMakeFiles/a.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/a.dir/depend
 

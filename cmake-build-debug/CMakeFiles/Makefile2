@@ -64,10 +64,10 @@ RM = /home/chichcpu/clion-2020.2.4/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/CODE/cp1
+CMAKE_SOURCE_DIR = /mnt/Code/cp1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/CODE/cp1/cmake-build-debug
+CMAKE_BINARY_DIR = /mnt/Code/cp1/cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -104,14 +104,14 @@ clean: CMakeFiles/K.dir/clean
 CMakeFiles/E.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/E.dir/build.make CMakeFiles/E.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/E.dir/build.make CMakeFiles/E.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/CODE/cp1/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target E"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/Code/cp1/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target E"
 .PHONY : CMakeFiles/E.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/E.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/CODE/cp1/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/Code/cp1/cmake-build-debug/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/E.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/CODE/cp1/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/Code/cp1/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/E.dir/rule
 
 # Convenience name for target.
@@ -131,14 +131,14 @@ CMakeFiles/E.dir/clean:
 CMakeFiles/g.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/g.dir/build.make CMakeFiles/g.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/g.dir/build.make CMakeFiles/g.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/CODE/cp1/cmake-build-debug/CMakeFiles --progress-num=12,13 "Built target g"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/Code/cp1/cmake-build-debug/CMakeFiles --progress-num=12,13 "Built target g"
 .PHONY : CMakeFiles/g.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/g.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/CODE/cp1/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/Code/cp1/cmake-build-debug/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/g.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/CODE/cp1/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/Code/cp1/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/g.dir/rule
 
 # Convenience name for target.
@@ -158,14 +158,14 @@ CMakeFiles/g.dir/clean:
 CMakeFiles/a.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.dir/build.make CMakeFiles/a.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.dir/build.make CMakeFiles/a.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/CODE/cp1/cmake-build-debug/CMakeFiles --progress-num=9,10,11 "Built target a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/Code/cp1/cmake-build-debug/CMakeFiles --progress-num=9,10,11 "Built target a"
 .PHONY : CMakeFiles/a.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/a.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/CODE/cp1/cmake-build-debug/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/Code/cp1/cmake-build-debug/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/a.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/CODE/cp1/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/Code/cp1/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/a.dir/rule
 
 # Convenience name for target.
@@ -185,14 +185,14 @@ CMakeFiles/a.dir/clean:
 CMakeFiles/B.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/B.dir/build.make CMakeFiles/B.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/B.dir/build.make CMakeFiles/B.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/CODE/cp1/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target B"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/Code/cp1/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target B"
 .PHONY : CMakeFiles/B.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/B.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/CODE/cp1/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/Code/cp1/cmake-build-debug/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/B.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/CODE/cp1/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/Code/cp1/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/B.dir/rule
 
 # Convenience name for target.
@@ -212,14 +212,14 @@ CMakeFiles/B.dir/clean:
 CMakeFiles/F.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/F.dir/build.make CMakeFiles/F.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/F.dir/build.make CMakeFiles/F.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/CODE/cp1/cmake-build-debug/CMakeFiles --progress-num=5,6 "Built target F"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/Code/cp1/cmake-build-debug/CMakeFiles --progress-num=5,6 "Built target F"
 .PHONY : CMakeFiles/F.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/F.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/CODE/cp1/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/Code/cp1/cmake-build-debug/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/F.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/CODE/cp1/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/Code/cp1/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/F.dir/rule
 
 # Convenience name for target.
@@ -239,14 +239,14 @@ CMakeFiles/F.dir/clean:
 CMakeFiles/K.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/K.dir/build.make CMakeFiles/K.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/K.dir/build.make CMakeFiles/K.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/CODE/cp1/cmake-build-debug/CMakeFiles --progress-num=7,8 "Built target K"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/Code/cp1/cmake-build-debug/CMakeFiles --progress-num=7,8 "Built target K"
 .PHONY : CMakeFiles/K.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/K.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/CODE/cp1/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/Code/cp1/cmake-build-debug/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/K.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/CODE/cp1/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/Code/cp1/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/K.dir/rule
 
 # Convenience name for target.

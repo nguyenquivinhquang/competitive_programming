@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/mnt/CODE/cp1/cvip/vjudge/GreedyDnQPractice1/K.cpp" "/mnt/CODE/cp1/cmake-build-debug/CMakeFiles/K.dir/cvip/vjudge/GreedyDnQPractice1/K.cpp.o"
+  "/mnt/Code/cp1/cvip/vjudge/GreedyDnQPractice1/K.cpp" "/mnt/Code/cp1/cmake-build-debug/CMakeFiles/K.dir/cvip/vjudge/GreedyDnQPractice1/K.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

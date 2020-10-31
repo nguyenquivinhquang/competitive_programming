@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/mnt/CODE/cp1/cvip/vjudge/Mashup1510/E.cpp" "/mnt/CODE/cp1/cmake-build-debug/CMakeFiles/E.dir/cvip/vjudge/Mashup1510/E.cpp.o"
+  "/mnt/Code/cp1/cvip/vjudge/Mashup1510/E.cpp" "/mnt/Code/cp1/cmake-build-debug/CMakeFiles/E.dir/cvip/vjudge/Mashup1510/E.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

@@ -5,3 +5,15 @@
 *.cfg
 codeforces/problemset/1398D
 codeforces/problemset/1398C
+cmake-build-debug
+.idea
+*.cmake
+*.cmake
+*.bin
+*.cmake
+*.bin
+*.xml
+*.cmake
+cmake-build-debug/CMakeFiles/Makefile2
+*.cbp
+cmake-build-debug/Makefile

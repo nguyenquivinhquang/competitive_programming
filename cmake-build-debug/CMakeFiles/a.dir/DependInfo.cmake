@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/mnt/CODE/cp1/codeforces/problemset/1433.cpp" "/mnt/CODE/cp1/cmake-build-debug/CMakeFiles/a.dir/codeforces/problemset/1433.cpp.o"
-  "/mnt/CODE/cp1/cvip/vjudge/GreedyDnQPractice1/a.cpp" "/mnt/CODE/cp1/cmake-build-debug/CMakeFiles/a.dir/cvip/vjudge/GreedyDnQPractice1/a.cpp.o"
+  "/mnt/Code/cp1/codeforces/problemset/1433.cpp" "/mnt/Code/cp1/cmake-build-debug/CMakeFiles/a.dir/codeforces/problemset/1433.cpp.o"
+  "/mnt/Code/cp1/cvip/vjudge/GreedyDnQPractice1/a.cpp" "/mnt/Code/cp1/cmake-build-debug/CMakeFiles/a.dir/cvip/vjudge/GreedyDnQPractice1/a.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
