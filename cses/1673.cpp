@@ -1,70 +1,69 @@
+//https://cses.fi/problemset/task/1673
 #include <bits/stdc++.h>
-#define N 5005
+
 #define ll long long
 #define pp pair<int, int>
-#define Quang "cute"
-#define fastio ios_base::sync_with_stdio(false), cin.tie(NULL);
-#define reset(a, val) memset(a, val, sizeof(a));
-#define modulo int(1e9 + 7)
-#define endl '\n'
-#define to first
-#define we second
-#define infm -1e11
-#define inf 1e14
+#define int long long
+const int N = 1000;
+const int INF = 1e18;
 using namespace std;
-struct node
-{
-    int u, v;
-    ll weight;
+struct edge {
+    int a, b, cost;
+    edge(int x, int y, int z) {
+        a = x, b = y, cost = z;
+    }
 };
-int n, m;
-ll d[N];
-map<int, ll> temp[N];
-vector<node> edge;
-int main()
-{
-    int x, y, w;
-    reset(d, -1);
-    cin >> n >> m;
-    for (int i = 1; i <= m; i++)
-    {
-        cin >> x >> y >> w;
-        temp[x][y] = w;
-        if (temp[y].find(x) != temp[y].end())
-        {
-            temp[x][y] = temp[y][x] = inf;
-        }
-    }
-    for (int i = 1; i <= n; i++)
-    {
-        for (auto v : temp[i])
-        {
-            edge.push_back({i, v.to, v.we});
-        }
-    }
-    for (int i = 1; i <= n; i++)
-        d[i] = infm;
-
-    d[1] = 0;
-    int k = n;
-    while (Quang == "cute")
-    {
-        bool check = false;
-        for (auto u : edge)
-        {
-            if (d[u.u] == inf)
-                d[u.v] = inf;
-            else if ((d[u.u] > infm && d[u.u] < inf) && d[u.v] < d[u.u] + u.weight)
-            {   
-                d[u.v] = d[u.u] + u.weight;
-                check = true;
-            }
-        }
-        if (check == false || k < 0)
-            break;
-        k--;
-    }
-    if (d[n] >= inf || d[n] == infm || k < 0)
-        d[n] = -1;
-    cout << d[n] << endl;
+bool cmp(edge& a, edge& b) {
+    if (a.a == b.a)
+        return a.b < b.b;
+    return a.a < b.a;
 }
+int n, m, v;
+vector<edge> e;
+void solve() {
+    vector<int> d(n, INF);
+    d[0] = 0;
+    vector<int> p(n, 0);
+    sort(e.begin(), e.end(), cmp);
+    int x = 0;
+    for (int i = 0; i < n - 1; ++i) {
+        for (int j = 0; j < m; ++j)
+            if (d[e[j].a] < INF)
+                if (d[e[j].b] > d[e[j].a] + e[j].cost) {
+                    d[e[j].b] = max(-INF, d[e[j].a] + e[j].cost);
+                }
+    }
+    // for (auto v : d)
+    //   cout << v << " ";
+    // cout << endl;
+    for (int i = 0; i < n - 1; ++i)
+        for (int j = 0; j < m; ++j)
+            if (d[e[j].a] < INF)
+                if (d[e[j].b] > d[e[j].a] + e[j].cost) {
+                    d[e[j].b] = -INF;
+                    p[e[j].b] = 1;
+                }
+    if (p[n - 1])
+        cout << -1;
+    else
+        cout << -d[n - 1];
+}
+signed main() {
+    ios_base::sync_with_stdio(false), cin.tie(NULL);
+    int x, y, w;
+    cin >> n >> m;
+    for (int i = 0; i < m; i++) {
+        cin >> x >> y >> w;
+        w *= -1;
+        e.push_back(edge(x - 1, y - 1, w));
+        // e.push_back(edge(y -1, x -1, w));
+    }
+    solve();
+}
+
+/*
+ Don't use endl, use '\n'
+ just use endl with interactive problems !!
+
+
+*/

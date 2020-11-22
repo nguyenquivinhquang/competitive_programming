@@ -4,7 +4,7 @@
 #define ll long long
 #define pp pair<int, int>
 
-const int N =  100;
+const int N = 100;
 
 using namespace std;
 int n, k, a[N], b[N], total = 1, it[N * 4 + 5];
@@ -15,18 +15,18 @@ void add(int node, int l, int r, int val, int pos) {
         it[node] += val;
         return;
     }
-    int mid = (l + r) >> 1;
+    int mid = (l + r) / 2;
     add(node * 2, l, mid, val, pos);
     add(node * 2 + 1, mid + 1, r, val, pos);
     it[node] = max(it[node * 2], it[node * 2 + 1]);
 }
 int itfind(int node, int l, int r, int u, int v) {
     if (r < u || l > v)
-        return 0;
+        return -1e9;
     if (u <= l && r <= v) {
         return it[node];
     }
-    int mid = (l + r) >> 1;
+    int mid = (l + r) / 2;
     return max(itfind(node * 2, l, mid, u, v), itfind(node * 2 + 1, mid + 1, r, u, v));
 }
 unordered_map<int, int> compress;
@@ -44,7 +44,7 @@ int coutnLis(int l, int r) {
     vector<int> dp;
     int res = 0;
     for (int i = l; i < r; i++) {
-        if (a[i] >= a[r])
+        if (a[i] >= a[r] && a[i] < a[l - 1])
             continue;
         res = max(res, itfind(1, 1, total, 1, a[i]) + 1);
         add(1, 1, total, 1, a[i]);
@@ -82,8 +82,9 @@ signed main() {
     int res = 0;
     for (int i = 1; i <= n; i++)
         cout << a[i] << " ";
+    cout << endl;
     for (int i = 1; i <= k + 1; i++) {
-        cout << " " << coutnLis(b[i - 1] + 1, b[i]);
+        cout << coutnLis(b[i - 1] + 1, b[i]) << " ";
     }
     cout << res;
 }

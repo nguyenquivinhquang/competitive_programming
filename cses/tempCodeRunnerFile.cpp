@@ -1,1 +1,1 @@
- sum[u] += (sum[preU] - sum[u] - node[u]);
+);

@@ -7,19 +7,16 @@
 #define quyen_sort(x, size) sort(x + 1, x + 1 + size);
 using namespace std;
 int root[N], Rank[N];
-void makeSet()
-{
+void makeSet() {
     for (int i = 1; i < N; i++)
         root[i] = i;
 }
-int find(int x)
-{
+int find(int x) {
     if (x != root[x])
         root[x] = find(root[x]);
     return root[x];
 }
-void join(int u, int v)
-{
+void join(int u, int v) {
     u = find(u);
     v = find(v);
     if (u == v)
@@ -27,19 +24,17 @@ void join(int u, int v)
     if (Rank[u] == Rank[v])
         Rank[u]++;
     if (Rank[u] > Rank[v])
-        root[v] = u; 
+        root[v] = u;
     else
         root[u] = v;
 }
-void solve()
-{
+void solve() {
     reset(root);
     reset(Rank);
     makeSet();
     int n, x, y, q;
     cin >> n;
-    for (int i = 1; i <= n; i++)
-    {
+    for (int i = 1; i <= n; i++) {
         cin >> x >> y >> q;
         if (q == 1)
             join(x, y);
@@ -47,8 +42,7 @@ void solve()
             cout << (find(x) == find(y)) << endl;
     }
 }
-int main()
-{
+int main() {
     int testcase;
     solve();
 }
