@@ -5,6 +5,7 @@
 *.cfg
 codeforces/problemset/1398D
 codeforces/problemset/1398C
+codeforces/contest
 cmake-build-debug
 .idea
 *.cmake
