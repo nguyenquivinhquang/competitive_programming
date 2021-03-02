@@ -21,3 +21,4 @@ cmake-build-debug/Makefile
 CMS/
 TMC/
 *.o
+codeforces/contest/
