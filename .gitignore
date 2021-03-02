@@ -22,3 +22,6 @@ CMS/
 TMC/
 *.o
 codeforces/contest/
+.vscode/khung_chuong_trinh.code-snippets
+*.code-snippets
+*.json
