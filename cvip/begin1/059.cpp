@@ -11,7 +11,7 @@ int main()
     cin >> n;
     bool check[maxn]; int giao[maxn];
     memset(check, maxn, false);
-    for (int i=1;i<=maxn;i++) giao[i]=0;
+    for (int i=1; i< maxn;i++) giao[i]=0;
     int t;
     for (int i= 1; i <= n; i++)
     {
@@ -26,13 +26,13 @@ int main()
         giao[t]++;
     }
     cout<<"The intersection of 2 sets: ";
-    for (int i=1;i<=maxn;i++){
+    for (int i=1;i < maxn;i++){
         if (giao[i]>1) cout<<i<<" ";
     }
     
     cout<<endl;
     cout<<"The union of 2 sets: ";
-    for (int i=1;i<=maxn;i++)
+    for (int i=1;i < maxn;i++)
     {
         if (check[i]==true) cout<<i<<" ";
     }

@@ -5,7 +5,9 @@ using namespace std;
 int main()
 {
     int h, r;
-    cin >> h; r=h;
+    cin >> h;
+    h = 3;
+    r = h;
     string mid, a;
     mid = "*";
     a = "*";
@@ -16,9 +18,10 @@ int main()
     }
     a += "*";
     mid += "*";
-    cout<<mid<<endl;
-    for (int i=2;i<h;i++){
-        cout<<a<<endl;
+    cout << mid << endl;
+    for (int i = 2; i < h; i++)
+    {
+        cout << a << endl;
     }
-    cout<<mid;
+    cout << mid;
 }

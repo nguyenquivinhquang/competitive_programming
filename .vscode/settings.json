@@ -72,7 +72,10 @@
         "typeindex": "cpp",
         "typeinfo": "cpp",
         "rope": "cpp",
-        "slist": "cpp"
+        "slist": "cpp",
+        "any": "cpp",
+        "bit": "cpp",
+        "variant": "cpp"
     },
     "C_Cpp.errorSquiggles": "Enabled"
 }
