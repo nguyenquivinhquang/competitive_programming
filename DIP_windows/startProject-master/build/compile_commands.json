@@ -1,7 +1,0 @@
-[
-{
-  "directory": "D:/c++/DIP_windows/startProject-master/build",
-  "command": "C:\\PROGRA~1\\CODEBL~1\\MinGW\\bin\\G__~1.EXE  @CMakeFiles/startProject-master.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\startProject-master.dir\\main.cpp.obj -c D:\\c++\\DIP_windows\\startProject-master\\main.cpp",
-  "file": "D:/c++/DIP_windows/startProject-master/main.cpp"
-}
-]
