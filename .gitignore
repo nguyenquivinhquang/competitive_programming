@@ -27,3 +27,6 @@ codeforces/contest/
 *.json
 *.json
 .vscode/
+*.in
+*.out
+*.ans
