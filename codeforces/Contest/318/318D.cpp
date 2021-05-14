@@ -17,20 +17,15 @@ void solve() {
             coor[x][y] -=4;
             if (coor[x][y] >= 4) q.push({x, y});
             coor[x + 1][y]++, coor[x - 1][y]++, coor[x][y + 1]++, coor[x][y - 1]++;
-            q.push({x, y + 1}), q.push({x + 1, y}), q.push({x - 1, y}), q.push({x, y - 1});\
-            
+            q.push({x, y + 1}), q.push({x + 1, y}), q.push({x - 1, y}), q.push({x, y - 1});\           
         }
-
     }
-
 }
 signed main() {
    ios::sync_with_stdio(false), cin.tie(NULL);
-//    cin.exceptions(cin.failbit);
+   cin.exceptions(cin.failbit);
     int query, x, y;
-
     cin >> n >> query;
-    // cout << n << endl;
     coor[500][500] = n;
     solve();
     while (query--) {
