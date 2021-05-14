@@ -13,7 +13,6 @@ void find_substring(string substring, set<int> &a) {
     size_t pre = 0;
     while (check) {
        size_t found=str.find(substring, pre);
-//       cout << found << endl;
        if (found != std::string::npos) {
             a.insert(found);
             pre = found + 1;
