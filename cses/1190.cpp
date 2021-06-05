@@ -2,19 +2,16 @@
 #define maxn 200005
 #define ll long long
 using namespace std;
-struct cmp
-{
+struct cmp {
     ll l, r, sum, max_seg;
 };
 
 ll n, m, x, k, a[maxn];
 cmp it[maxn * 4];
-void build(int node, int l, int r, int pos, int val)
-{
+void build(int node, int l, int r, int pos, int val) {
     if (pos < l || pos > r)
         return;
-    if (l == r)
-    {
+    if (l == r) {
         it[node].l = val;
         it[node].r = val;
         it[node].sum = val;
@@ -33,26 +30,22 @@ void build(int node, int l, int r, int pos, int val)
     for (auto c : temp)
         it[node].max_seg = max(it[node].max_seg, c);
 }
-void reset()
-{
+void reset() {
     cmp temp = {-1000000000000, -1000000000000, -1000000000000, -1000000000000};
     for (int i = 1; i <= 4 * n; i++)
         it[i] = temp;
 }
-int main()
-{
+int main() {
     cin >> n >> m;
     reset();
     int temp;
-    for (int i = 1; i <= n; i++)
-    {
+    for (int i = 1; i <= n; i++) {
         cin >> temp;
         build(1, 1, n, i, temp);
     }
-    for (int i = 1; i <= m; i++)
-    {
+    for (int i = 1; i <= m; i++) {
         cin >> k >> x;
         build(1, 1, n, k, x);
-        cout << it[1].max_seg << endl;
+        cout << max((ll)0 , it[1].max_seg) << endl;
     }
 }
