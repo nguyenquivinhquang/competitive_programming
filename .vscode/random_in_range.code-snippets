@@ -1,0 +1,14 @@
+{
+	"random_in_range": {
+		"prefix": "random_in_range",
+		"body": [
+		  "long long unsigned random_in_range(int min_num, int max_num) {",
+		  "    unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();",
+		  "    std::default_random_engine generator(seed);",
+		  "    uniform_int_distribution<long long unsigned> distribution(min_num, max_num);",
+		  "    return distribution(generator);",
+		  "}"
+		],
+		"description": "random_in_range"
+	  }
+}

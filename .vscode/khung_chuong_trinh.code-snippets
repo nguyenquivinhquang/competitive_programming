@@ -16,14 +16,10 @@
           "    ios_base::sync_with_stdio(false), cin.tie(NULL);",
           "",
           "}",
-          "",
-          "/*",
-          " Don't use endl, use '\\n'",
-          " just use endl with interactive problems !!",
-          "",
-          "",
-          "*/"
+          ""
         ],
         "description": "KhungCp"
       }
+    
 }
+
