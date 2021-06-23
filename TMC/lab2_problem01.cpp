@@ -10,16 +10,13 @@
 #define input_file freopen("input.txt", "r", stdin);
 #define output_file freopen("output.txt", "w", stdout);
 using namespace std;
-double f(double x)
-{
+double f(double x) {
     return log(pow(x, 4));
 }
-void Qa()
-{
+void Qa() {
     double xL = 0.5, xU = 2;
     double mid = (xL + xU) / 2.0;
-    for (int i = 1; i <= 3; i++)
-    {
+    for (int i = 1; i <= 3; i++) {
         mid = (xL + xU) / 2.0;
         double temp = f(mid);
         if (f(xL) * temp < 0)
@@ -31,15 +28,13 @@ void Qa()
     }
     cout << mid << endl;
 }
-void Qb()
-{
+void Qb() {
     double xL = 0.5, xU = 2;
     double mid = (xL * f(xU) - xU * f(xL)) / (f(xU) - f(xL));
-    for (int i = 1; i <= 3; i++)
-    {
+    for (int i = 1; i <= 3; i++) {
         mid = (xL * f(xU) - xU * f(xL)) / (f(xU) - f(xL));
         double temp = f(mid);
-        
+
         if (temp < 0)
             xL = mid;
         else if (temp > 0)
@@ -49,8 +44,7 @@ void Qb()
     }
     cout << mid;
 }
-int main()
-{
+int main() {
     int testcase;
     Qa();
     Qb();
