@@ -15,7 +15,7 @@ signed main() {
     string str;
     cin >> n;
     for (int i = 1; i <= n; i++) {
-        cin >> str;
+        cin >> str; 
         a[str] += 1;
     }
     auto b = a;
