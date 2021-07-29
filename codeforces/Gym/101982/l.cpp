@@ -25,10 +25,3 @@ signed main() {
     unordered_map<int, int> test;
     cout << -1;
 }
-
-/*
- Don't use endl, use '\n'
- just use endl with interactive problems !!
-
-
-*/
