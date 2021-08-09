@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "windowsSdkVersion": "8.1",
+            "compilerPath": "/usr/bin/g++",
+            "cStandard": "c11",
+            "cppStandard": "c++14",
+            "intelliSenseMode": "gcc-x64",
+            "compileCommands": "${workspaceFolder}/DIP_windows/startProject-master/build/compile_commands.json"
+        }
+    ],
+    "version": 4
+}
