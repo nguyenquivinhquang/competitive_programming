@@ -25,7 +25,7 @@ bool cmp2(pp u, pp v) {
     return u.second <= v.second;
 }
 void quangcute() {
-    cout << "Quang cute"; 
+    cout << "Quang cute";
 }
 signed main() {
     ios_base::sync_with_stdio(false), cin.tie(NULL);
@@ -40,9 +40,9 @@ signed main() {
         cin >> point.first >> point.second;
         point.second *= sw;
         if (check(point) == false) continue;
-        points.push_back(point); 
-    }   
-    
+        points.push_back(point);
+    }
+
     sort(points.begin(), points.end(), cmp);
     for (auto v : points) {
         auto it = lower_bound(a.begin(), a.end(), v,cmp2);

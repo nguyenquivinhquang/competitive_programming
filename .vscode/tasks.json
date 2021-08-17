@@ -3,7 +3,7 @@
         {
             "type": "cppbuild",
             "label": "C/C++: g++.exe build active file",
-            "command": "D:\\Applications\\CodeBlocks\\MinGW\\bin\\g++.exe",
+            "command": "E:\\Applications\\CodeBlocks\\MinGW\\bin\\g++.exe",
             "args": [
                 "-g",
                 "${file}",
