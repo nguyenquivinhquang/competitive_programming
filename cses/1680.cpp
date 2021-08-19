@@ -9,50 +9,51 @@ using namespace std;
 
 int n, m;
 vector<int> edge[N];
-void longgest_path() {
-    vector<int> pre(n + 2, -1), d(n + 2, 0);
-    set<pp> q;
-    q.insert({0, 1});
-    while (q.size()) {
-        int u = q.begin()->second;
-        q.erase(q.begin());
-        for (auto v : edge[u]) {
-            if (d[v] > d[u] - 1) {
-                pre[v] = u;
-                q.erase({d[v], v});
-                d[v] = d[u] - 1;
-                q.insert({d[v], v});
-            }
+const int INF = 1000000000;
+vector<vector<pair<int, int>>> adj;
+int nxt[N], dp[N];
+bool isPossibel = false;
+int dfs(int u) {
+    if (u == n) return dp[n] = 1;
+    if (dp[u] != -1) return dp[u];
+    dp[u] = -1;
+    for (auto v : edge[u]) {
+        dfs(v);
+        if (dp[v] + 1 > dp[u] && dp[v] != 0) {
+            dp[u] = dp[v] + 1;
+            nxt[u] = v;
         }
     }
-    if (d[n] == 0) {
-        cout << "IMPOSSIBLE";
-        return;
-    }
-    vector<int> trace;
-    int u = n;
-    while (u != 1) {
-        trace.push_back(u);
-        u = pre[u];
-    }
-    trace.push_back(1);
-    reverse(trace.begin(), trace.end());
-    cout << trace.size() << "\n";
-    for (auto v : trace)
-        cout << v << ' ';
+    return dp[u];
 }
+
 signed main() {
     ios_base::sync_with_stdio(false), cin.tie(NULL);
+//    freopen("input.txt", "r", stdin);
+//    freopen("output.txt", "w", stdout);
+    memset(dp, -1, sizeof(dp));
     int x, y;
     cin >> n >> m;
+    adj.resize(n+1);
     for (int i = 1; i <= m; i++) {
         cin >> x >> y;
         edge[x].push_back(y);
-        // edge[y].push_back(x);
     }
-    longgest_path();
+    dfs(1);
+    cerr << "ok" << endl;
+    if (dp[n] == -1) {
+        cout << "IMPOSSIBLE";
+        return 0;
+    }
+    vector<int> ans; ans.push_back(1);
+    int u = 1;
+    while (u != n) {
+        u = nxt[u];
+        ans.push_back(u);
+    }
+    cout << ans.size() << "\n";
+    for (auto v : ans) cout << v << " ";
 }
-
 /*
  Don't use endl, use '\n'
  just use endl with interactive problems !!
