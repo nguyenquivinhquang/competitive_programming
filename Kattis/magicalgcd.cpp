@@ -1,62 +1,37 @@
-#include <iostream>
-#include <vector>
-#include <math.h>
-#include <algorithm>
-#include <string>
-#include <map>
-#define el '\n'
-#define mod %
-#define ll long long
-#define maxn 100000
-
-/*12111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111*/
+#include <bits/stdc++.h>
 using namespace std;
-int n = 0, m = 0;
 
-ll Gcd(ll x, ll y)
-{
-    if (x < y)
-        swap(x, y);
-    ll r = x;
-    while (y!=0)
-        r = x mod y, x = y, y = r;
-    return x;
-}
+#define rep(i, a, b) for(int i = a; i < (b); ++i)
+#define all(x) begin(x), end(x)
+#define sz(x) (int)(x).size()
+typedef long long ll;
+typedef pair<int, int> pii;
+typedef vector<int> vi;
+#define int ll
+const int N = 100009;
+int n, a[N];
+void solve() {
+    int res = 0;
+    cin >> n;
+    for (int i = 1; i <= n; i++) cin >> a[i], res = max(res, a[i]);
+    map<int,int> cur; // gcd, length;
 
-int main()
-{
-    ios_base::sync_with_stdio(false), cin.tie(NULL);
-    //cout<<Gcd(30,60);
-    ll t, test, x, res, g;
-    cin >> t;
-
-    while (t--)
-    {
-        cin >> n;
-        map<ll, int> r;
-        res = 0;
-        for (int i = 0; i < n; i++)
-        {
-            cin >> x;
-            map<ll, int> p;
-            res = max(res, x);
-            p[x] = i;
-            for (map<ll, int>::iterator it = r.begin(), jt; it != r.end(); it++)
-            {
-                g = Gcd(it->first, x);
-                res = max(res, g * (i - it->second + 1));
-
-                //cout << g << " " << i - it->second + 1 << el;
-
-                jt = p.find(g);
-                if (jt != p.end())
-                    jt->second = min(jt->second, it->second);
-                else
-                    p[g] = it->second;
-            }
-            r = p;
-            //cout<<"------"<<endl;
+    for (int i = 1; i <= n; i++) {
+        map<int,int> temp;
+        for (auto v : cur) {
+            int gcd = __gcd(v.first, a[i]);
+            res = max(res, gcd * (v.second + 1));
+            // if (res == 120) cout << i << " " << v.second << " " << v.first << "\n";
+            temp[gcd] = max(temp[gcd], cur[v.first] + 1);
         }
-        cout << res << el;
+        cur.clear(); cur = temp;
+        if (cur[a[i]] == 0) cur[a[i]] = 1;
     }
+    cout << res << endl;
+}
+signed main() {
+    ios::sync_with_stdio(0); cin.tie(0);
+    cin.exceptions(cin.failbit);
+    int testcase; cin >> testcase;
+    while (testcase--) solve();
 }

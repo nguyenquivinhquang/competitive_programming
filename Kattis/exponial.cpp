@@ -40,18 +40,21 @@ ll fast_exp(ll x, ll sm, ll modul)
         return a;
     }
 }
-ll Hoai_Thuong(ll x, ll y) 
+ll TQ(ll x, ll y) 
 {
     if (x == 1)
         return 1;
     if (y == 1)
         return  0;
-    if (x<=2) return fast_exp(x,Hoai_Thuong(x-1,y),y);
-    ll sm = y;
+    if (x <= 2) return 2 % y;
+    else if (x <= 3) return 9 % y;
+    if (x<=4) return 262144 % y;
+        // fast_exp(x,TQ(x-1,y),y);
+
     ll p=phi(y);
-    ll mu = Hoai_Thuong(x - 1,p);
+    ll mu = TQ(x - 1,p);
     
-    return fast_exp(x,mu+p,y);
+    return fast_exp(x,mu+p, y);
 }
 
 int main()
@@ -62,6 +65,6 @@ int main()
     cin>>n>>m;
     //cout <<phi(12);
     //cout<<fast_exp(2,1843201,6912000);
-    ll t=Hoai_Thuong(n,  m);
+    ll t=TQ(n,  m);
     cout << t% m;
 }
