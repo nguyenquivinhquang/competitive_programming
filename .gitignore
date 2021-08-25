@@ -21,7 +21,6 @@ cmake-build-debug/Makefile
 CMS/
 TMC/
 *.o
-codeforces/contest/
 .vscode/khung_chuong_trinh.code-snippets
 *.code-snippets
 *.json
@@ -38,3 +37,4 @@ Kattis/a[i]
 Kattis/j)
 Kattis/a[i]
 *.txt
+codeforces/Gym/BABP2018/b
