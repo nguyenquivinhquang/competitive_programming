@@ -1,40 +1,30 @@
-#include <iostream>
-
+#include <bits/stdc++.h>
 using namespace std;
 
-bool check(int x)
-{
-    int sum = 0;
-    for (int i = 1; i < x; i++)
-        if (x % i == 0)
-            sum += i;
-    if (sum == x)
-        return true;
-    else
-        return false;
+#define rep(i, a, b) for(int i = a; i < (b); ++i)
+#define all(x) begin(x), end(x)
+#define sz(x) (int)(x).size()
+
+const int N = 1000;
+
+typedef long long ll;
+typedef pair<int, int> pii;
+typedef vector<int> vi;
+void solve() {
+
 }
-
-int main()
-{
-    int n;
-    int a[6]; a[0]=0;
-    a[1] = 6;
-    a[2] = 28;
-    a[3] = 496;
-    a[4] = 8128;
-    a[5]=10000000;
-    int count = 0;
-    cin >> n;
-
-    while (a[count] < n)
-    {
-        count++;
-    };
-    count--;
-    cout << count << endl;
-    for (int i = 1; i <= count; i++)
-    {
-        cout << a[i] << endl;
+signed main() {
+    ll a,b,res;
+    cin >> a >> b;
+    int j = sqrt(max(a, b)) + 1;
+    if (a % b == 0 || b % a == 0) {
+        cout << min(a, b);
+        return 0;
     }
-    return 0;
+    for (; j >= 1; j--) {
+        if (a % j == 0 && b % j ==0) {
+            cout << j;
+            return 0;
+        }
+    }
 }

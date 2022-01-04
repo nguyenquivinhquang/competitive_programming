@@ -1,4 +1,3 @@
-#pragma once
 #include <iostream>
 #include <iomanip>
 #include <math.h>
@@ -13,7 +12,6 @@ int main()
     for (int i = 1; i <= t; i++)
     {
         cin >> a;
-        if (a > 0)
         {
             double res = 0;
             double n = 0;
@@ -22,10 +20,8 @@ int main()
                 n++;
                 res = res + 1 / n;
             }
-            cout << n + 1 << endl;
+            cout << n << endl;
         }
-        else
-            cout << 2 << endl;
     }
     return 0;
 }

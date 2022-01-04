@@ -1,43 +1,27 @@
-#pragma once
-#include <iostream>
-#include <iomanip>
-#include <math.h>
+#include <bits/stdc++.h>
 using namespace std;
 
-int main()
-{
-    int t;
-    int n;
-    cout << fixed;
-    cout << setprecision(5);
-    cin >> t;
-    for (int i = 1; i <= t; i++)
-    {
-        cin >> n;
-        if (n > 0)
-        {
-            long res = 1;
-            long y = 1;
-            for (int j = 1; j <= n; j++)
-            {
-                res = res * j;
-                y = 2 * y;
-            }
-            double x1, x2;
-            x1 = 1.00000;
-            x2 = 0.00000;
-            for (int j = 1; j <= n; j++)
-            {
-                double k = j * j;
-                x1 = x1 * (1 + (1 / k));
-                x2 = 2 + sqrt(x2);
-            }
-            x2 = sqrt(x2);
-            cout << y << " " << res << " " << x1 << " " << x2 << endl;
-        }
-        else
-            cout << 0.00000 << endl;
+#define rep(i, a, b) for(int i = a; i < (b); ++i)
+#define all(x) begin(x), end(x)
+#define sz(x) (int)(x).size()
+
+const int N = 1000;
+const int Mod = 1e9 + 7;
+typedef long long ll;
+typedef pair<int, int> pii;
+typedef vector<int> vi;
+void solve() {
+    ll res = 1, n ; cin >> n;
+    for (int  i = 1; i <= n; i++) {
+        res = (res * i) % Mod;
     }
-    //cout<<setprecision(5);
-    return 0;
+    
+}
+signed main() {
+    ios_base::sync_with_stdio(false), cin.tie(NULL);
+    int testcase = 1; 
+    cin >> testcase;
+    for (int t = 1; t <= testcase; t++) {
+        solve();
+    }
 }

@@ -1,31 +1,26 @@
-#pragma once
-#include <iostream>
-#include <iomanip>
-#include <math.h>
+#include <bits/stdc++.h>
 using namespace std;
+#define int long long
+#define rep(i, a, b) for(int i = a; i < (b); ++i)
+#define all(x) begin(x), end(x)
+#define sz(x) (int)(x).size()
 
-int main()
-{
-    int a[100000];
-    a[1] = 1;
-    int max_res = 0;
-    int res = 0;
+const int N = 1000;
 
-    for (int i = 1; i <= 10000; i++)
-    {
-        a[i] = i;
-        for (int j = i / 2; j >= 1; j--)
-        if (i%j==0)
-        {
-            a[i] += j;
-        }
-        if (max_res < a[i])
-        {
-            res = i;
-            max_res = a[i];
-        }
+typedef long long ll;
+typedef pair<int, int> pii;
+typedef vector<int> vi;
+int n, k, q;
+int a[1000009];
+signed main() {
+    ios_base::sync_with_stdio(false), cin.tie(NULL);
+    cin >> n >> q;
+    for (int i = 1; i <= n; i++) cin >> a[i];
+    while(q--) {
+        cin >> k;
+        ll res = 0;
+        for (int i = 1; i*k <= n; i++)
+            res += a[i*k];
+        cout << res << "\n";
     }
-    cout << res;
-
-    return 0;
 }

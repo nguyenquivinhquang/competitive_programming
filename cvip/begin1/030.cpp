@@ -3,17 +3,18 @@
 #include <iomanip>
 #include <math.h>
 using namespace std;
-
+double a[100100];
+double b[100100];
+double c[100100];
+const int M = 1000;
 int main()
 {
     cout << fixed << setprecision(5);
-    double a[10000];
-    double b[10000];
-    double c[10000];
+
     a[1] = 1.00000;
-    b[1]=a[1];
+    b[1] =  a[1];
     c[1] = 1.00000;
-    for (int i = 2; i <= 10000; i++)
+    for (int i = 2; i <= M; i++)
     {
         a[i] =  (sqrt(b[i - 1]) + 0.5000 * (sqrt(a[i - 1]) )   ); a[i]=a[i]/2;
         b[i]=b[i-1]+a[i-1]*a[i-1]*2.00000;

@@ -12,8 +12,8 @@
             ],
             "windowsSdkVersion": "8.1",
             "compilerPath": "/usr/bin/g++",
-            "cStandard": "c11",
-            "cppStandard": "c++14",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
             "intelliSenseMode": "gcc-x64",
             "compileCommands": "${workspaceFolder}/DIP_windows/startProject-master/build/compile_commands.json"
         }

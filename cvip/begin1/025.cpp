@@ -13,6 +13,10 @@ int main()
     for (int i = 1; i <= t; i++)
     {
         cin >> n;
+        if (n == 0) {
+            cout << "1 0\n";
+            continue;
+        }
         int j, res;
         j = 1;
         res = 0;
