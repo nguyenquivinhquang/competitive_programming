@@ -37,3 +37,10 @@ signed main() {
         solve();
     }
 }
+
+/*
+ Don't use endl, use '\n'
+ just use endl with interactive problems !!
+
+
+*/

@@ -1,8 +1,0 @@
-#include <iostream>
-
-using namespace std;
-
-int main()
-{
-    cout<<"1606938044258990275541962092341162602522202993782792835301376";
-}
